@@ -1,0 +1,12 @@
+= Rapport 2012 – 2017 LAMSADE
+
+Le bô rapport LAMSADE. Qu’il est beau.
+
+== Nettoyage bibliographie
+Au cas où ça pourrait être utile (et vu que je sens qu’on va devoir le re-faire), voici qqs modifications apportées à la biblio p/r à la génération auto. (Slmt celles d’Olivier, Stéphane en a fait beaucoup plus, entre autres : « Avec la sortie de DFIS, bibtex pense que le nom des auteurs est leur prénom et vice-versa. Certaines autres entrées ajoutées par la suite ont le même problème.
+J'ai fait des inversions dans beaucoup d'entrées (certaines automatiquement, d'autres à la main) et il reste des corrections à faire. ».)
+
+* J’ai laissé les urls qui pourraient apporter qqch et seulement enlevé quand elle pointe vers le doi et que le champ doi est mis également. (J’ai dû faire cette vérification manuellement.) Pour les entrées à modifier, j’ai utilisé qqch comme : '^[ \t]*[uU]rl( )*=' vers 'commnturl='.
+* Pour le doi, j’ai utilisé qqch comme : '^( )*doi( )*=( )*"http(s?)://(dx\.)?doi.org/' vers 'doi="'.
+* J’en ai profité pour corriger l’une ou l’autre entrée quand je voyais par hasard des caractères incorrects.
+

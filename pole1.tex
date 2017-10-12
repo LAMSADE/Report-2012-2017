@@ -1,0 +1,266 @@
+\subsection{General overview}
+
+The main aim of the  research team ``Decision Aid'' is to construct models, to design algorithms and to implement systems for various problems where a decision has to be made by an individual, a set of individuals, or an autonomous agent. When the decision maker is an individual or a set of individuals, the models aim at being psychologically plausible and/or acceptable, and the designed systems aim at giving an advice to the decision maker(s), who will have the final word on the implemented decision. When the decision maker is an autonomous agent, the focus is on designing algorithms that perform as well as possible in various possible contexts. 
+
+Our research methodologies come from various fields: microeconomics (and especially decision theory, social choice and game theory), operations research, artificial intelligence (and especially machine learning). In more detail, most of our works can be classified into one of these four categories:
+\begin{itemize}
+\item {\em axiomatic}: constructing normative models for rational agents or societies of agents;
+\item {\em procedural}: designing concrete mechanisms and studying their properties;
+\item {\em algorithmic}: designing, analysing and experimenting algorithms for the latter mechanisms;
+\item {\em applicative}: applying the output of our research and more generally our {\em savoir faire} to real-world problems.
+\end{itemize}
+
+The contexts in which decisions have to be made are the following:
+
+\begin{itemize}
+\item {\em individual decision making}: the decision maker is an individual or an autonomous agent, who has to make a decision in a complex environemnt. Complexity is due either to the presence of possibly conflicting criteria, and/or to the combinatorial structure of the solution space  (possibly caused by a temporal structure of the decision space), and/or to the presence of incomplete knowledge.
+\item {\em collective decision making}: a common decision has to be made by a group of agents with possibly conflictual preferences.
+\item {\em strategic decision making}: a decision, or a series of decisions, has to be made by an agent in the presence of other agents who act strategically.  
+\end{itemize}
+
+Since 2012, the team has undergone an important evolution. First, its size has significantly increased. Eight new members arrived:
+
+\begin{itemize}
+\item assistant professors: Julien Lesca, MCF (2014), Olivier Cailloux (2015), Sonia Toubaline (2016).
+\item CNRS junior researchers: Matias Nu\~{n}ez (2015), Yves Meinard (2015).
+\item CNRS senior researchers: Rida Laraki (2013), Juliette Rouchier (2015),  Remzi Sanver (2015).
+% Myriam Merad (2016).
+\end{itemize}
+
+In the same time, there were two departures and some `false departures'. As real departures: Flavien Balbo was promoted professor at Ecole des Mines de Saint-Etienne in 2013, while Mohamed Ali-Aloulou left the academy in 2014 and is now senior consultant at Quintiq. The false departures: when team 3 was created, two members of team 1 naturally joined it (Elsa Negre, Alexis Tsouki\`as). Also, Suzanne Pinson retired but immediately became professor emeritus. 
+%[Should we cite Miguel here? The question is whether in 2014 he was considered pole 1 or pole 3.] 
+
+Perhaps even more important is the fact that the team is undergoing a rapid transformation. In 2012, all its members but one (Denis Bouyssou) were computer scientists. It has now become truly interdisciplinary: Matias Nu\~{n}ez, Juliette Rouchier and Remzi Sanver are economists, Yves Meinard 
+%and Myriam Merad are 
+is an environmental scientist, and Rida Laraki, although belonging to the computer science section of CNRS, can also be considered a mathematician and an economist. 
+
+The scientific activities of the team are organised along six research projects, four of which are joint with another research team of the laboratory: Games and Social Choice: Axiomatic and Algorithmic Aspects (joint with team 2); Multi-objective Combinatorial Optimization (joint with team 2, will be presented together with team 2); Policy Analytics (joint with team 3); and Machine Learning (joint with team  3, will be presented together with team 3).
+
+%\section{Outstanding Results}
+%
+%Some outstanding results of the group:
+%
+%\begin{itemize}
+%\item the axiomatic study of bibliometric indices by Denis Bouyssou and his co-author Thierry Marchant. Denis Bouyssou was invited to give many talks on this topic [details to come]
+%\item the publication of the {\em Handbook of Computational Social Choice}. One of the five editors is J\'er\^ome Lang. Out of the 19 chapters, three are co-authored by at least one member or former member of LAMSADE (Yann Chevaleyre, J\'er\^ome Lang, Nicolas Maudet), and eight by someone who was an invited professor at LAMSADE between 2012 and 2017 (Haris Aziz, Craig Boutilier, Ioannis Caragiannis,  Edith Elkind, Ulle Endriss, Piotr Faliszewski, Arkadii Slinko, William Zwicker).
+%\item Tristan Cazenave has developed the GRAVE algorithm, is a generalization of David Silver and Sylvain Gelly's RAVE algorithm (who is one of the techniques at work in alphaGo). It was published at IJCAI 2015. The idea of RAVE is to use two kind of statistics, the mean result of the random games that start with a move and the mean result of the random games that contain a move. The second mean has more contributing games but is less accurate in the end. RAVE gradually shifts from the second mean to the first mean when more games are available. The idea of GRAVE is to use the statistics of the last node in the game tree that has more than a given number of random games instead of the statistics of the current node. It greatly improves RAVE for many games.
+%\end{itemize}
+
+\subsection{Research Projects}
+
+
+\subsubsection{Preference Modeling and Multicriteria Decision Aiding}
+
+This project aims at developing and studying different steps of a decision aiding process integrating a decision-maker's preferences. This objective includes theoretical aspects (development and axiomatisation of new preference models), methodological aspects (development of MultiCriteria Decision Aid methods and elicitation techniques) and practical and experimental aspects (implementation of these models and techniques in a real context, or experiments with individuals). The project brings together some concerns arising in Operational Research and Artificial Intelligence. It is articulated in four parts: 
+
+First, {\em problem structuring}: what is the general form of a decision aid problem, especially when it has a multicriterion nature? How should the set of alternatives or the family of criteria be defined? See \cite{Colorni2013What-1223003} for a general discussion about the definition of a decision problem. 
+%Our works mainly bear on basic concepts arising in preference modeling, such as compensation and incomparability. 
+The choice of the decision model and the problem structure are strongly related: \cite{Figueira2013An-623281} presents a guideline for such a choice. 
+
+Second, dealing with {\em structured preferences}, which includes the following questions: (a) Which preference model should we choose? We have been focusing on various models, such as  sophisticated preferences with thresholds, semi-orders, or valued interval orders \cite{Ozturk2015A-964395}. (b) When the domain of alternatives is a Cartesian product of value domains, how should preferences be represented? We have been focusing on conjoint measurement and graphical preferences models; in particular, \cite{Bouyssou2015A-634565} gives an axiomatization of outranking relations with concordance and discordance thresholds.
+ %which are central to aggregation functions of the ``pairwise comparison'' type.
+(c) How should {\em preference elicitation}, be performed? More precisely, how can we determine the decision parameters of an aggregation model, such as weights or thresholds, using examples in the form of pairwise comparisons of alternatives, or of a qualitative evaluation of alternatives in some ordered scale? See \cite{Rolland2015Elicitation-636304} for the elicitation of 2-additive bi-capacity parameters and \cite{Labreuche2015Extension-634557} for the elicitation of ordered weighted average operators. 
+
+Third, {\em validation}: 
+%This  important aspect in the resolution of a decision aiding problem consists in validating the methodology used in the decision process, as well as the recommendations given to the decision maker. The questions we focus on are: 
+What are the decision models than can easily be used? How can we define and trace the multicriteria decision process? How can we obtain a robust decision? (See \cite{BotteroFFGR15} for an application showing how to get robust recommandations.) How can argumentation theory be used for justifying the recommendations? A related topic is the experimentation where the use of different types of preference relations, aggregation functions or axiomatics are analysed during experiments done with individuals, as in
+%(see 
+ \cite{Deparis2015The-921683}.
+%for experiments showing the effect of bicriteria conflict on elicitation process).
+
+And fourth, {\em applications}: We focus on specific domains on which we apply our models and techniques. A first application concerns
+%such as bibliometrics, social networks,  ranking of hospitals, ranking scenarios for a new train line.   Concerning 
+bibliometrics: \cite{Bouyssou2016Ranking-1123269} proposes a  general unified axiomatisation for different ranking and bibliometric indices. 
+%we studied the mathematical properties of bibliometric indices. As an example, D. Bouyssou and Th Marchant proposed a
+Other applications concern industrial research projects. Two have been conducted with the SNCF, one on the use of an MCDA approach to define a new train line between Paris and Normandie (\url{www.lnpn.fr}); and one on 
+%The problem has a number of challenges related to multicriteria and multi decision-makers nature of the problem and the uncertainty on data. The second one was about 
+the evaluation of the comfort on trains \cite{Guerrand2015On-1223042}, leading to a software now used by the SNCF. 
+%or \cite{Lounesetal}), 
+Another one is concerned with the ranking of hospitals \cite{Mayag2016A-1168365}.
+% modeling of the decision-making process for medical care (project with Hopitaux Civils de Lyon) and identification of relevant indicators to be used during hospital certification visits (project with HAS).  
+%\end{enumerate}
+%\end{enumerate}
+
+
+\subsubsection{Intelligent Agents for Decision and Reasoning}
+
+The project, which lies in the field of Artificial Intelligence, covers search algorithms for exploring very large state spaces that can only be
+partially searched, as well as distributed AI. 
+% (multi-agent systems).
+
+\paragraph{Search algorithms and game playing}
+
+We have mainly worked on Monte Carlo
+Search algorithms for games such as Go and General Game Playing \cite{Cazenave2015Generalized-1222829}, and for
+optimization problems such as the Travelling Salesman with Time Windows \cite{DBLP:conf/ki/EdelkampC16,Cornu2017Perturbed-1168165}.
+The search algorithms we develop are tightly connected to Machine Learning:
+either online learning of the state of the game \cite{Cazenave2016Playout-1222820} or at the problem at hand, or offline
+learning of policies. Following the recent success of Deep Learning in the game of Go, we have
+started working on Deep Learning for games and we have improved the architecture
+of AlphaGo networks. The next step will be to combine Deep Learning
+with tree search algorithms.
+Moreover,  in 2016 Tristan Cazenave gained a lot of media attention due to the AlphaGo event. Many people have then heard of Artificial Intelligence, Deep Learning and Monte Carlo Tree Search in the context of Computer Go.
+
+\paragraph{Distributed Artificial Intelligence}
+
+Our first objective is  to define generic models and algorithms to support communications in multi-agent systems.
+We have designed a generic interaction model that takes into account complex
+interactions such as multi-party communication and context awareness for
+simulation and adaptive systems. 
+%The originality of this model is that environment
+%is considered as a first-order abstraction that supports interactions.
+%Priority policies are given to manage rules governing the context (un-)awareness
+%of the agents.
+This model was applied to crisis management and bimodal traffic
+%We call bimodal traffic, a traffic which takes into account both private vehicles
+%and public vehicles such as buses. The objective of this research is to
+%improve global traffic, to reduce bus delays and to improve bus regularity in
+%congested areas of the network. In our agent-based approach, traffic regulation
+%is obtained thanks to communication, collaboration and negotiation between
+%heterogeneous agents 
+\cite{BalboBP2016}.
+Our second objective is to design intelligent algorithms for discovering and selecting web services. 
+As centralised approaches
+%Service discovery and selection approaches are often done using a centralized
+%registry-based technique, which only captures common Quality of Service criteria.
+%These approaches 
+are not able to evaluate trust in service providers and
+often fail to comply with new requesters expectations, 
+%mainly because they are
+%not able (i) to take into consideration the social dimension and (ii) to capitalize
+%on information resulting from previous experiences. To address these challenges,
+we have constructed multi-agent models, which have demonstrated the capability to use
+previous interactions, knowledge representation and distributed reasoning, as
+well as social metaphors like trust \cite{Louati2015A-1250421}.
+
+
+
+\subsubsection{Games and Social Choice: Axiomatic and Algorithmic Aspects}
+
+%\subsection{Project description}
+
+The objective of this project (officially launched in 2016 and involving members of ``p\^oles'' 1 and 2 of LAMSADE) is to investigate alternative mechanisms of collective decision-making and to study strategic interaction in competitive and cooperative environments. In this framework, we develop normative models (via, in particular, the axiomatic characterization of voting rules, games, solution concepts, etc.) and we analyze them from the viewpoint of their algorithmic difficulty and their computation. 
+The project is structured in two main axes:
+
+\paragraph{Social choice and computational social choice} We are interested in analyzing collective decision situations (in particular, voting situations and resource sharing problems) by means of the axiomatic characterization of the related decision-making mechanisms. We are also interested in the impact of the algorithmic complexity of such mechanisms on their effective application, as well as their vulnerability to strategic behaviour and the role played by information sharing on their implementation. 
+
+\paragraph{Algorithmic game theory} Our main interest here is the efficient calculation of solution for games and the computational complexity of combinatorial optimisation problems arising on games, the compact representation of games and the analysis of learning algorithms in dynamic interaction situations.  \medskip
+  
+
+Some of the important topics that we have been studying are:  the design and axiomatic analysis of voting mechanisms \cite{BL2014a, Nunez2017Revisiting-1232049}; the game-theoretic analysis of voting rules \cite{Nunez2015Electoral-1159349}; computational hardness in voting \cite{Cornaz2013Kemeny-1052539, DBLP:conf/ijcai/FaliszewskiGLLM16}; voting on combinatorial structures \cite{DBLP:conf/ijcai/BarrotL16}; the strategic aspects of argumentation, and the connections between voting and argumentation theory \cite{Cailloux2016Arguing-1097261, PigozziPareto-1326421}; fair division of indivisible goods \cite{DBLP:books/sp/16/LangR16, Gourves2015Worst-1204664};  the efficient computation of solutions for cooperative \cite{cesari2016generalized} and non-cooperative \cite{Gourves2012Congestion-624993} games; and judgment aggregation \cite{LangPSTV2017}.
+
+
+%In the field of collective argument evaluation, the problem is to aggregate the opinions of several agents on how a given set of arguments should be evaluated. We have defined three aggregation operators that guarantee a unique and rational collective outcome. However, it is crucial not only to ensure that the outcome is logically consistent, but also satisfies measures of social optimality and immunity to strategic manipulation. Our results on the previously defined operators motivate further investigation into the relationship between social choice and argumentation theory. The extension of abstract argumentation theory from a single agent to a multi-agent perspective is part of the ANR project AMANDE.
+
+%\begin{itemize}
+%\item[-] the design and axiomatic analysis of voting mechanisms \cite{BL2014a, Nunez2017Revisiting-1232049};
+%\item[-] the game-theoretic analysis of voting rules \cite{Nunez2015Electoral-1159349};
+%\item[-] computational hardness in voting \cite{Cornaz2013Kemeny-1052539, DBLP:conf/ijcai/FaliszewskiGLLM16};
+%\item[-] voting on combinatorial structures \cite{DBLP:conf/ijcai/BarrotL16};
+%\item[-] connections between voting  and argumentation theory \cite{DBLP:books/sp/16/LangR16, Cailloux2016Arguing-1097261};
+%\item[-] fair division of indivisible goods \cite{DBLP:books/sp/16/LangR16, Gourves2015Worst-1204664};
+%\item[-] the efficient computation of solutions for cooperative \cite{cesari2016generalized} and non-cooperative \cite{Gourves2012Congestion-624993} games;
+%\item[-] judgment aggregation \cite{LangPSTV2017}.
+%\end{itemize}
+
+
+%\medskip
+%
+%
+%\noindent {\bf Permanent members:} St{\'e}phane Airiau, Tristan Cazenave, Olivier Cailloux, Denis Cornaz, Lucie Galand, Laurent Gourv{\`e}s (co-head), J{\' e}r{\^o}me Lang, Rida Laraki, Julien Lesca, J{\' e}r{\^o}me Monnot, Matias Nu\~nez, Stefano Moretti (co-head), Meltem \"Ozt\"urk, Gabriella Pigozzi, Remzi Sanver.
+%\noindent {\bf Non permanent members:} Nathanaël Barrot, Giulia Cesari,  François Durand, Diodato Ferraioli, Hossein Khani, Justin Kruger, Lydia Tlilane, Ana\"elle Wilczynski.
+%
+%\medskip
+
+%\noindent {\bf National and international collaborations }
+
+%Several members of the project participate to the coordination of national working groups supported by different \textit{Groupement de recherche} (GDR) of the CNRS, in particular by the GDR \textit{Recherche Op\'erationnelle} and the pr\'e-GDR \textit{Intelligence Artificielle} (IA).
+%The project also benefits from international collaborations with many renowned institutions such as Carnegie Mellon, Kyushu University, National Technical University of Athens, Oxford, Politecnico di Milano, University of Amsterdam, University of D\"usseldorf.    
+%The members of the project are widely involved in the organization of international events on game theory and  computational social choice, like the 13th edition of the European Meeting on Game Theory (SING13), to be held at the University Paris-Dauphine from July 5th to July 7th, 2017;  the D-TEA 2017 international workshop on decision theory; the series of International Workshops on Computational Social Choice (COMSOC). Many members of the project  are also members of the program committee of  international conferences in this research stream, such as, for instance, ACM EC, WINE, AAMAS, IJCAI, ECAI.
+    
+%\medskip
+%\noindent {\bf Funded Research Projects}
+
+%The project is (or was) supported by several  ANR projects: {\em Combinatorial Optimization with Competitive Agents} (COCA, 2009-2013, coordinated by L. Gourv{\`e}s) in collaboration with LIP6; {\em Computation, Communication, Rationality and Incentives in Collective and Cooperative Decision Making} 
+%(CoCoRICo-CoDec, 2014-2018, coordinated by J. Lang) with CREM and LIP6; {\em Advanced Multilateral Argumentation for DEliberation} (AMANDE, 2013-2018) in collaboration with CRIL, LIFL, LIP6, LIPADE, and IRIT; {\em Distributed learning algorithms orchestration for mobile networks resource management} (NETLEARN, 2013-2017) in collaboration with with INRIA-LIG, UVSQ-PRISM, Telecom ParisTech, Alcatel-Lucent Bell Labs and Orange Labs.
+%It is also supported by the \textit{PSL Chaire d'Excellence} project {\em Microbehavioral foundations of institutional design} (MIFID, 2017-2019, coordinated by R. Sanver).
+
+
+
+
+
+%\medskip
+%\noindent {\bf Some Recent scientific contributions}
+%
+%%\medskip
+%%\noindent {\bf Perspectives}
+%%
+%%New relevant research issues in the avenue of the project are resumed in the following proposals:\\
+%%- \textit{Fairness and Constraints for Collective Solutions in Resource Allocation}. This project proposal has been submitted to the call ``DFG ANR 2017'', and it consists in designing mechanisms and algorithms for resource allocation (coordinator of the project proposal: J. Monnot).\\
+%%- \textit{Preferences over sets: an experimental analysis} (PREFEX). This project proposal has been submitted to the call ``AAPG ANR 2017'', and it aims to test  and to experimentally understand the principles that people apply for ranking sets (coordinator of the project proposal: R. Sanver).
+
+%\subsubsection{Contributions majeures}
+%
+%\subsubsection{Collaborations internationales}
+%
+%\subsubsection{Animation et vie du p\^ole}
+
+
+
+%\documentclass{article}
+%
+%\begin{document}
+\subsubsection{Policy Analytics}
+
+LAMSADE has recently developed a new interdisciplinary approach to decision-making, with the aim to apply already known methods to new fields. It has been identified a few years ago that there is a general demand for decision-aiding regarding public policy, and formal decision-aiding tools in particular. The application of known tools cannot be made without adapting to constraints of decision that are specific to public policies, such as the time frame (longer than for private decision), the buildling of legitimacy, the acceptation that discussion and argumentation is central to decision-making. The project rests on an interdisciplinary team mixing economists, a philosopher, and computer scientists.
+The main lines of research of the project are:
+
+\begin{itemize}
+\item Analysis of political controversy and public policies so as to improve choice procedures with the help of moral philosophy. This aspect is developed through critical analyses of past cases, such as pollution controversy, history of a public policy aiming at developing organic food chains, and how biodiversity is defined and measured in most conservation policy. In this cases, definitional and procedural issues are central \cite{Mundler2016Alimentation-1034595, Meinard2017La-1132055, Rouchier2016Learning-1034611, Meinard2017Measuring-1132041}
+\item Tools for evaluation of public policies. This line of research relies on the building of framework that help identify completely and quickly the flaws in policies, in comparison with the aim that was to be attained. The question of anticipating on measurements while designing the policy is very central in this line of research  \cite{Tsoukias2015Rural-1223037,Kana-Zeumo2014A-619377,Giordano2017Drinking-1250556}. 
+\item Tools for conception of public policies. A better understanding of the emergence of some civil society institutions to deal with chain food problems, as well as the emergence of public policy about biodiversity conservation, enabled us to produce a framework to proposed innovation in public policies, referring largely to Elinor Ostrom's framework   \cite{DeMarchi2016From-617095,Meinard2016The-1052633, Lamine2016D-1204722}. 
+\end{itemize}
+
+
+%This  transversal project, involving members of teams~1 and~3 of LAMSADE, runs a regular seminar since january 2017, with researchers and actors of public action. 
+
+%
+%This project has been supported by an exploratory funding by PSL "Conception Innovante des Politiques Publiques" (CIPP) \url{http://www.lamsade.dauphine.fr/cipp/}, a PEPS CNRS/PSL (DIPP) project for which LAMSADE was responsible of 20000 euros (2014) and financed 4 projects \url{http://www.lamsade.dauphine.fr/dipp/}, a GDR Policy Analytics was created with INERIS, IRSM, IRSTEA in 2016. 2 workshops (\url{http://dimacs.rutgers.edu/Workshops/Citizen/}; \url{http://dimacs.rutgers.edu/Workshops/HumanEnvironments/}) and one international seminar were organized; a MAPP project (120 000 \euro) on the measurements of city quality; and an INDOPP project (120000 \euro) 
+%%C-K theory for 
+%on the conception of public policies.
+
+%\medskip
+%\noindent\textbf{Project members}:\\
+%\noindent\textbf{Permanent members}: Jerome Lang (?), Yves Meinard,Matias Nunez, Gabriella Pigozzi, Juliette Rouchier, Remzi Sanver, Alexis Tsoukias.\\
+%\noindent\textbf{PhD students}: Iris Carolina Valdez Achucarr, Mourad Choulak,  Nicolas Paget (finished), Irene Pluchinotta, Antoine Richard, ; Oussama Raboun, Romain Touret  \textbf{postdoc} Giovanna Fancello, Irene Pluchinotta (former phD then postdoc). 
+
+ 
+
+\subsection{Perspectives}
+
+Future perspectives in the field of search algorithms will be a deeper integration of deep reinforcement learning and Monte-Carlo search (see also the perspectives of the Machine Learning project). Further developments will be made along in the alphaGo program (which we have already re-programmed).  While a huge library of existing plays is available in the domain of Go playing, in other domains the evaluation functions have to  be learned only from playing the program against itself; this applies especially to video games as well as some optimisation problems. We will pursue the learning of evaluation functions in such domains. We will focus on optimization problems that are naturally represented in two dimensions: indeed, the deep neural networks that work well for board games are convolutional networks corresponding to two-dimensional spaces, and are in this sense closely related to those that are used for image processing. 
+%The GRAVE technique for Go will be generalised to other two-dimensional optimisation problems.
+
+In the field of preference modelling, we will first pursue much further the work on the theoretical and practical analysis of bibliometric (and related) indices.  Given the increasing importance of these indices, this research is likely to have a huge impact in the middle term. A second perspective consists in bridging our expertises in preference modelling, preference elicitation and argumentation theory so as to design systems that not only propose decisions but that justify them using well-formed relevant arguments. 
+%A risk associated with this research perspective is that in some domains, such justifications and explanations may not be feasible.  
+This research will be conducted together with the group of Vincent Mousseau at Ecole Centrale, and is in line with the series of workshops {\em Decision Analysis and Preference Learning} (DA2PL). Also, our contractual work will be pursued (especially with the SNCF).
+
+In the field of computational social choice and algorithmic game theory, we intend to follow new trends and switch our focus from the {\em computational} difficulties to the {\em communication} difficulties: while computational hardness is indeed an obstacle to the practical use of a voting rule, there are now many ways of coping with it, and these ways have been now been largely explored; on the other hand, while it is sometimes acceptable to wait a few hours or a few days before knowing the output of a collective decision process, it is clearly unacceptable to ask the agents to interact with a system for more than a few minutes and for more than a few interaction rounds.  We will design low-communication protocols for voting, fair division, as well as coalition formation games. Moreover,   we intend to focus now also on matching mechanisms, from an axiomatic, computational, communication, {\em and applicative} point of view. 
+Also, in the case of fair division, we will now consider more practical, real-world settings.
+%(a French-German ANR project proposal has been submitted to the call ``DFG ANR 2017'', with J. Monnot as coordinator). 
+Finally, we are getting more and more interested in the practical acceptability of collective decision mechanisms and how individuals behave when confronted to to them; we will pursue this line of research by going progressively more towards experimental social choice.
+%in particular, a French-Turkish ANR project, with R. Sanver as coordinator, which has been submitted to the call ``AAPG ANR 2017'', it aims to test  and to experimentally understand the principles that people apply for ranking sets of ``items'' (in a large sense).
+
+The emerging field of policy analytics, which started later than the other three, has less achievements than the others, but more perspectives. 
+
+A widely acknowledged problem for which no established perspective exists today is the {\em the social responsibility of algorithms}, which are increasingly used as automatic decision devices. It will be necessary to introduce regulations, which will call for issues related to algorithm design (under a mechanism design perspective), to algorithm auditing and testing (including the social impact of their use when they learn observing social behaviour) and to the economic impact of different forms of regulation in this area. 
+
+%Dealing with the complex measures of biodiversity in policy
+A problem-oriented line of research, so as to answer to a very contemporary public policy issue, is the {\em organisation of schemes of biodiversity compensation}. It is indeed required that any destruction of an area with a certain level of biodiversity has to be compensated by the creation of another zone of same or higher biodiversity level. However this notion is very difficult to define and leads to problems of definition (subject to ecology expertise), but also relies on a very high quantity of data, of heterogenous shapes and origins, that have to be combined so as to ease decision. In that sense, this interdisciplinary branch of the project relies on association of expert knowledge, decision-aiding tools and data modeling and treatment. 
+
+%We are also starting to focus on the {\em threats in dealing with natural and social risk}. 
+%The notion of threat for actors has been introduced in a context where producers can loose assets, but also see their ability to produce be reduced. To obtain a novel approach to natural and industrial risks assessment and management, threat should be defined as a reduction on the capabilities of some actors rather than directly on their goods/assets (endowments), in the sense of Sen's capability theory, a normative framework that aims at evaluating individual well-being as well as social arrangements. The principal aim of the building of this approach is to contribute in establishing a theory of ``collective risks'' (threats to a population, a territory etc.) without necessarily making references to individual risks or computing them. 
+
+Finally, a perspective that bridges research in the projects {\em Games and Social Choice}, {\em Intelligent Agents for Decision and Reasoning} and {\em Policy Analytics} consists in  {\em linking argumentation and agent-based simulation for policy analysis}.
+An observation in that the design of a public policy generally mainly relies on a technical analysis by the deciders, but that it hardly takes into account and actually analyses the postures of the public that will have to adopt the policy. This impacts greatly on the legitimacy of policies that are developed, and resistance by a well-informed and educated public is increasingly observed. One part of the policy analytics project will consist in developing a joint methodology using agent-based modeling and argumentation for the analysis of political controversy. The idea is to rest on a few real-life examples of political conflicts relying on environmental controversy, and develop a methodology so as to enhance the integration of these two methodologies to improve the description of cases, positions of the actors, forms of arguments, and positive proposals of project. 
+

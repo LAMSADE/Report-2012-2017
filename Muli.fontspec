@@ -1,0 +1,7 @@
+\defaultfontfeatures[Muli]{
+	Path=Muli/,
+	Extension=.ttf,
+	UprightFont = Muli-Regular,
+	BoldFont = Muli-Bold
+}
+

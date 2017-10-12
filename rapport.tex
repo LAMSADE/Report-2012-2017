@@ -1,0 +1,180 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[version=last, pagesize, twoside=semi, DIV=calc, 12pt, a4paper, french, english, bibliography=totoc]{scrartcl}
+\input{preamble/packages}
+\input{preamble/math_basics}
+\input{preamble/math_mine}
+\input{preamble/redac}
+\input{preamble/draw}
+\input{preamble/acronyms}
+\usepackage[official,right]{eurosym}
+\nobibliography{lamsade}
+%package doi does not work with bibentry. Need to replace it with this command, to protect doi's with \url.
+\newcommand*{\doi}[1]{\href{http://doi.org/#1}{\url{doi: #1}}}
+\usepackage{geometry}
+\geometry{margin=2.8cm}
+\renewcommand{\cite}{\citep}
+
+\begin{document}
+\title{Research report HCERES 2017}
+\author{LAMSADE}
+\hypersetup{
+	pdfsubject={Research report}
+}
+
+\begin{titlepage}
+	\centering
+	\vspace*{\baselineskip} % White space at the top of the page
+	{
+		\LARGE 
+		CNRS
+		
+		PSL Research University
+		
+		Université Paris-Dauphine
+	
+		\vspace{7em}
+		
+		\rule{15em}{1.6pt}
+		\vspace{0.5\baselineskip}
+	
+		Laboratoire \textsc{Lamsade}
+		
+		UMR 7243
+		\vspace{-0.5\baselineskip}
+
+		\rule{15em}{1.6pt}
+	
+		\vspace{7em}
+	
+		Scientific Report and Project
+		
+		2012 -- 2017
+		
+		\vfill
+		
+	}
+	\url{http://www.lamsade.dauphine.fr}
+	
+\end{titlepage} 
+
+\pagestyle{empty}
+
+\vspace*{5cm}
+{\flushright%
+	à Eric Jacquet-Lagrèze\\
+	1947 -- 2017\par
+}
+\newpage
+
+\renewcommand{\baselinestretch}{0.97}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+\newpage
+\null
+\newpage
+\pagestyle{plain}
+\setcounter{page}{1}
+
+\definecolor{redh}{RGB}{255,0,102}
+
+{%
+	\centering%
+		\colorbox{redh}{%
+			\begin{minipage}{12.75cm}
+%				\rule{\columnwidth}{1ex}
+				\begin{center}
+					\color{white}
+					\Large \sffamily%
+						\vspace{1em}
+						Group D\par
+						Evaluation campaign 2017 – 2018\par
+						\vspace{1em}
+						Research unit\par
+						\vspace{1em}
+						Application
+				\end{center}
+			\end{minipage}%
+		}
+	\par
+}
+
+\vspace{2em} 
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+
+\noindent
+\textbf{Unit name}: Laboratoire d'Analyse et Modélisation de Systèmes d'Aide à la Décision \\
+\textbf{Acronym}: LAMSADE, UMR 7243
+
+\vspace{1em}
+
+\noindent
+\textbf{Director's name (current contract)}: Alexis Tsoukiàs \\
+\textbf{Director's name (next contract)}: Daniela Grigori (pending approval)\\
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+
+\vspace{1em}
+
+\noindent
+Application type: 
+
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+Renewal (without important modification) \\%☑
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+
+\vspace{1em}
+
+\noindent
+List of supervising institutions and bodies of the research unit:
+
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+\begin{tabular}{ll}
+%	\toprule
+		Current contract & Next contract \\
+%	\midrule
+		Université Paris Dauphine & Université Paris Dauphine \\
+		CNRS & CNRS \\
+%	\bottomrule
+\end{tabular}\\
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par 
+
+\vspace{1em}
+
+\noindent
+Inter-disciplinary evaluation for the research unit: 
+
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+Yes \\
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+
+\newpage
+\pagestyle{empty}
+\null
+\newpage
+\pagestyle{plain}
+
+\input{bilan.tex}
+
+\section{Team 1: Decision Aid}\label{team1}
+\input{pole1.tex}
+
+\section{Team 2: Algorithms, Combinatorial Optimization}\label{team2}
+\input{pole2.tex}
+
+\section{Team 3: Data Sciences}\label{team3}
+\input{pole3.tex}
+
+\bibliography{lamsade}
+
+%\textbf{Highlights.}  A list of significant publications of Team~2 is \cite{Guillemot2013Finding-1017097,Bazgan2014Parameterized-628151,Abu-Khzam2016Data-1204494,DBLP:journals/algorithmica/BonnetE0P15,DBLP:conf/stacs/BonnetLP16,DBLP:journals/algorithmica/EscoffierGM17,Karpinski2015New-1298222,Lampis2014Parameterized-1298206,Cornaz2014Chromatic-623556,DBLP:journals/mp/BergnerCCFLMT15,DBLP:journals/networks/FuriniGT17,Uchoa2013Hop-level-624237,DBLP:journals/dam/GabrelLMR14,DBLP:journals/anor/GabrelMW13,DBLP:journals/mp/AissiMMQ15,Bazgan2015Approximate-633407,Bazgan2016Discrete-1168159,Dachert2017Efficient-1250848,Belhoul2014An-634706,Kaddani2017Weighted-1232001}.  
+%In particular, \cite{DBLP:journals/algorithmica/BonnetE0P15} shows that the maximum clique problem can ce approximated in moderately exponential time (while such approximation is impossible in polynomial)
+%time,
+%and \cite{Karpinski2015New-1298222} proves explicit inapproximability bounds for the metric Traveling Salesman Problem.
+%In \cite{DBLP:journals/mp/AissiMMQ15} it is proved that the set of non-dominated global cuts is polynomial.
+%In \cite{Cornaz2014Chromatic-623556} the quality of Lov\'asz theta function, as a bound for coloring, is improved using graph theoretical tools.\\
+ 
+
+%\textbf{ HCERES comitee experts (suggested).}
+%Clarisse Dhaenens, Ioan Todinka, Daniel Marx, Andr\'as Seb\H{o}, Alain Quilliot. \\
+
+\end{document}
+

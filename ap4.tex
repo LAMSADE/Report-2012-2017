@@ -1,0 +1,1026 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[version=last, pagesize, twoside=semi, DIV=calc, 12pt, a4paper, french, english, bibliography=totoc]{scrartcl}
+\input{preamble/packages}
+\input{preamble/math_basics}
+\input{preamble/math_mine}
+\input{preamble/redac}
+\input{preamble/draw}
+\input{preamble/acronyms}
+\usepackage[official,right]{eurosym}
+\nobibliography{lamsade}
+%package doi does not work with bibentry. Need to replace it with this command, to protect doi's with \url.
+\newcommand*{\doi}[1]{\href{http://doi.org/#1}{\url{doi: #1}}}
+
+\begin{document}
+\title{Research report HCERES 2017}
+\author{LAMSADE}
+\hypersetup{
+	pdfsubject={Research report}
+}
+
+\definecolor{redh}{RGB}{255,0,102}
+{%
+	\centering%
+		\colorbox{redh}{%
+			\begin{minipage}{12.75cm}
+%				\rule{\columnwidth}{1ex}
+				\begin{center}
+					\color{white}
+					\Large \sffamily%
+						\vspace{1em}
+						Group D\par
+						Evaluation campaign 2017 – 2018\par
+						\vspace{1em}
+						Research unit\par
+						\vspace{1em}
+						Appendix 4
+				\end{center}
+			\end{minipage}%
+		}
+	\par
+}
+
+\vspace{2em}
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+
+\noindent
+\textbf{Unit name}: Laboratoire d'Analyse et Modélisation de Systèmes d'Aide à la Décision \\
+\textbf{Acronym}: LAMSADE, UMR 7243
+
+\vspace{1em}
+
+\noindent
+\textbf{Director's name (current contract)}: Alexis Tsoukiàs \\
+\textbf{Director's name (next contract)}: Daniela Grigori (pending approval)\\
+\noindent\textcolor{redh}{\rule{\columnwidth}{1pt}}\par
+
+\section{Products of the research}
+\subsection{Journals}
+
+The members of the LAMSADE have published 
+340 articles in international journals. The highlighted contributions are:
+\begin{enumerate}
+\item \bibentry{Bouyssou2015A-634565}
+\item  \bibentry{Bazgan2014Parameterized-628151} 
+\item \bibentry{Cornaz2014Chromatic-623556}
+\item  \bibentry{Abu-Khzam2016Data-1204494}
+\item  \bibentry{DBLP:journals/algorithmica/BonnetE0P15}
+\item  \bibentry{DBLP:journals/algorithmica/EscoffierGM17}
+\item  \bibentry{Karpinski2015New-1298222}
+\item  \bibentry{DBLP:journals/networks/FuriniGT17}
+\item  \bibentry{Uchoa2013Hop-level-624237}
+\item  \bibentry{DBLP:journals/mp/BergnerCCFLMT15}
+\item  \bibentry{DBLP:journals/dam/GabrelLMR14}
+\item  \bibentry{DBLP:journals/anor/GabrelMW13}
+\item  \bibentry{Bazgan2015Approximate-633407}
+\item  \bibentry{Bazgan2016Discrete-1168159}
+\item  \bibentry{DBLP:journals/mp/AissiMMQ15}
+\item  \bibentry{Dachert2017Efficient-1250848}
+\item  \bibentry{Belhoul2014An-634706}
+\item \bibentry{Kaddani2017Weighted-1232001} 
+\item \bibentry{GMMM17} 
+\item \bibentry{DBLP:journals/tkde/Camacho-Rodriguez15}
+\item \bibentry{DBLP:journals/dpd/BelhajjamePHF15}
+\item \bibentry{AngaritaArocha2016Modeling-1159056} 
+\item \bibentry{Belhajjame2013Incrementally-904545}
+\item \bibentry{cazenave2017residual}
+\end{enumerate}
+
+The rest of the 20\% selection is:
+\begin{enumerate}
+%\item \bibentry{Bazgan2014Parameterized-628151}
+\item \bibentry{GMMM17}
+\item \bibentry{PigozziPareto-1326421}
+\item \bibentry{Bouzeghoub2012Integration-624705} 
+\item \bibentry{Meinard2017Measuring-1132041}
+\item \bibentry{LangPSTV2017}
+\item \bibentry{Rouchier2016Learning-1034611}
+\item \bibentry{Figueira2013An-623281}
+\item \bibentry{Kana-Zeumo2014A-619377}
+\item \bibentry{Ozturk2015A-964395}
+%\item \bibentry{Bouyssou2015A-634565}
+\item \bibentry{Rolland2015Elicitation-636304}
+\item \bibentry{Labreuche2015Extension-634557}
+\item \bibentry{BotteroFFGR15}
+\item \bibentry{Deparis2015The-921683}
+\item \bibentry{Bouyssou2016Ranking-1123269}
+\item \bibentry{Cornu2017Perturbed-1168165}
+\item \bibentry{Cazenave2016Playout-1222820}
+\item \bibentry{BalboBP2016}
+\item \bibentry{Louati2015A-1250421}
+\item \bibentry{BL2014a}
+\item \bibentry{Nunez2017Revisiting-1232049}
+\item \bibentry{Nunez2015Electoral-1159349} 
+\item \bibentry{Gourves2015Worst-1204664}
+\item \bibentry{cesari2016generalized}
+\item \bibentry{Giordano2017Drinking-1250556}
+\item \bibentry{DeMarchi2016From-617095}
+\item \bibentry{Meinard2016The-1052633}
+\item \bibentry{Lamine2016D-1204722}
+%\item \bibentry{Cornaz2014Chromatic-623556}
+%\item \bibentry{Abu-Khzam2016Data-1204494}
+\item \bibentry{Bazgan2017Structural-1204463}
+%\item \bibentry{DBLP:journals/algorithmica/BonnetE0P15}
+\item \bibentry{DBLP:journals/algorithmica/BonnetEPT15}
+\item \bibentry{DBLP:journals/algorithmica/BourgeoisEPR12}
+\item \bibentry{Crowston2014Satisfying-904498}
+%\item \bibentry{DBLP:journals/algorithmica/EscoffierGM17}
+\item \bibentry{DBLP:journals/algorithmica/GutinKSSY12}
+\item \bibentry{Gutin2012Parameterized-904512}
+\item \bibentry{Guillemot2013Finding-1017097}
+%\item \bibentry{Karpinski2015New-1298222}
+\item \bibentry{Kim2015A-619500}
+%\item \bibentry{DBLP:journals/networks/FuriniGT17}
+\item \bibentry{Cornaz2017151}
+%\item \bibentry{Uchoa2013Hop-level-624237}
+\item \bibentry{Lacroix2012Models-610920}
+\item \bibentry{Mahjoub2012On-624880}
+\item \bibentry{Lacroix2012On-615125}
+%\item \bibentry{DBLP:journals/mp/BergnerCCFLMT15} 
+\item \bibentry{DBLP:journals/informs/CapraraFM13}
+\item \bibentry{DBLP:journals/ipl/CapraraFMT16}
+\item \bibentry{DBLP:journals/cor/FuriniM13}
+\item \bibentry{Cacchiani201697}
+\item \bibentry{DBLP:journals/eor/GabrelMT14}
+%\item \bibentry{DBLP:journals/dam/GabrelLMR14}
+%\item \bibentry{DBLP:journals/anor/GabrelMW13}
+\item \bibentry{Bazgan2013Single-624467}
+\item \bibentry{Bazgan2013Approximation-624791}
+\item \bibentry{Gourves2015Approximate-634726} 
+\item \bibentry{DBLP:journals/tcs/GourvesMPV17}
+%\item \bibentry{Bazgan2015Approximate-633407}
+%\item \bibentry{Bazgan2016Discrete-1168159}
+\item \bibentry{Vanderpooten2017Covers-1168175}
+\item \bibentry{Bazgan2013On-626114}
+%\item \bibentry{DBLP:journals/mp/AissiMMQ15}
+\item \bibentry{Klamroth2015On-634730}
+%\item \bibentry{Dachert2017Efficient-1250848}
+%\item \bibentry{Belhoul2014An-634706}
+\item \bibentry{Figueira2013Algorithmic-623559}
+\item \bibentry{Galand2012Exact-610325}
+%\item \bibentry{Kaddani2017Weighted-1232001}
+\item \bibentry{Aissi2016Robust-1096886}
+\item \bibentry{Aloulou2014A-624967} 
+\item \bibentry{Dujardin2015A-634974}
+\item \bibentry{Madakat2013Biobjective-624327}
+%\item \bibentry{DBLP:journals/tkde/Camacho-Rodriguez15}
+%\item \bibentry{AngaritaArocha2016Modeling-1159056}
+%\item \bibentry{DBLP:journals/dpd/BelhajjamePHF15}
+\item \bibentry{DBLP:journals/ws/Belhajjame0GGHP15}
+\item \bibentry{DBLP:journals/fgcs/GarijoABCGG14}
+\item \bibentry{DBLP:journals/tsc/BelhajjameEP14}
+\item \bibentry{Bacall2013The-904520}
+\item \bibentry{Belhajjame2013Incrementally-904545}
+\item \bibentry{DBLP:journals/computer/BarhamgiBYBN16}
+\item \bibentry{DBLP:journals/biomedsem/HettneD0WBSMTCVGRCKSHBGR14}
+\item \bibentry{Bloch2016Defining-1222794}  
+\item \bibentry{Isaac2017Multi-dimensional-1222778}
+\item \bibentry{Yger2017Riemannian-1241283}
+\item \bibentry{cazenave2017residual}
+\item \bibentry{Linguet2015Estimating-1260037}
+\item \bibentry{DBLP:journals/dam/GabrelMM15}
+\end{enumerate}
+ 
+
+
+\subsection{Books and chapters}
+The members of the LAMSADE have published 8 books and have directed the redaction of 
+3 books. The highlighted contributions are:
+
+
+\begin{enumerate}
+\item \bibentry{HBCOMSOC2016}
+\item \bibentry{DBLP:books/sp/BeheshtiBSGMBGR16}
+\item \bibentry{Mundler2016Alimentation-1034595}
+\end{enumerate}
+%The rest of the selection is:
+
+
+
+
+
+% \bibentry{Lang2012Raisonnement-619528,Arduin2015Systeme-636803,Negre2015Systemes-635002,Negre2015Information-1007949,LRS2013,
+%Arduin2015Information-636809,
+%DBLP:books/sp/BeheshtiBSGMBGR16,
+%Pigozzi2014Judgment-634703}. 
+
+%The rest of the 20\% selection is:
+
+
+
+% and have directed  \bibentry{Dameri2014Smart-641945,HBCOMSOC2016,Mundler2016Alimentation-1034595}. 
+
+%ouvrages \bibentry{Lang2012Raisonnement-619528,Arduin2015Systeme-636803,Negre2015Systemes-635002,Negre2015Information-1007949,LRS2013,
+%Arduin2015Information-636809,
+%DBLP:books/sp/BeheshtiBSGMBGR16,
+%Pigozzi2014Judgment-634703}
+
+The members of the LAMSADE have published 
+44 book chapters. The highlighted contributions are:
+\begin{enumerate}
+\item \bibentry{DBLP:books/sp/16/LangR16}
+\item \bibentry{Linguet2016A-1222799}
+\item \bibentry{Meinard2017La-1132055}
+\item \bibentry{Tsoukias2015Rural-1223037}
+\item \bibentry{Guerrand2015On-1223042}
+\end{enumerate}
+The rest of the 20\% selection is:
+\begin{enumerate}
+\item \bibentry{Mahjoub2014Polyhedral-981720}
+\item \bibentry{LS2014}
+\item \bibentry{Hedeler2013A-640832}
+\end{enumerate}
+
+
+
+
+
+\subsection{Proceedings and articles in proceedings}
+
+The members of the LAMSADE  
+have participated to  the edition of 
+13 conference proceedings. The highlighted contributions are related to the conferences ISCO and ADT:
+\begin{enumerate}
+\item  \bibentry{DBLP:conf/iscopt/2016}
+%\item \bibentry{DBLP:conf/ijcai/2015cgw}
+\item \bibentry{DBLP:conf/aldt/2013}
+\end{enumerate}
+
+%Some members of the LAMSADE (D. Grigori, E. Negre, R. Mahjoub, V. Paschos, A. Tsouki\`as, T. Cazenave) 
+%have participated to  the edition of 
+%13 conference proceedings \bibentry{Negre2014Xe-631005,
+%DBLP:conf/ciac/2015,
+%DBLP:conf/aldt/2013,DBLP:conf/icsoc/2015,
+%DBLP:conf/icsoc/2014w,
+%DBLP:conf/ijcai/2015cgw,
+%DBLP:conf/ecai/2014cgw,
+%DBLP:conf/ijcai/2013cgw,
+%DBLP:conf/iscopt/2016,
+%DBLP:conf/iscopt/2014,
+%Younas20164th-1298455,
+%DBLP:conf/iscopt/2012,
+%DBLP:conf/ciac/2017} for ISCO, CIAC, ICSOC, CGW, EDA, and  IEEE Computer Society. 
+
+
+The members of the LAMSADE  
+have  contributed to 337 articles in conference proceedings. 
+The highlighted contributions are:
+\begin{enumerate}
+\item \bibentry{Airiau2016Rationalisation-1088325}
+\item \bibentry{Cazenave2015Generalized-1222829}
+\item  \bibentry{DBLP:conf/stacs/BonnetLP16}
+\item  \bibentry{Lampis2014Parameterized-1298206}
+\item \bibentry{Abu-Khzam2015On-1017005}
+\item \bibentry{Bojarski2017Structured-1259771}
+\item \bibentry{FLP2016}
+\item \bibentry{DBLP:conf/sigmod/Camacho-RodriguezCM14} 
+\end{enumerate}
+
+The rest of the 20\% selection is: 
+\begin{enumerate}
+\item \bibentry{Louati2014A-990319} 
+\item \bibentry{Louati2014A-1298436} 
+\item \bibentry{Louati2014Towards-1307413}
+\item \bibentry{Louati2015Trust-Based-1269604}
+\item \bibentry{DBLP:conf/cost/HarmassiGB15}
+\item \bibentry{DBLP:conf/IEEEscc/BelhoulHGGKB13}
+\item \bibentry{Gater2012Indexing-624941}
+\item \bibentry{Grigori2012Adding-619546}
+\item \bibentry{Bouzeghoub2012A-619531}
+\item \bibentry{Delias2015Discovering-1223048}
+\item  \bibentry{DBLP:conf/edbt/BaaziziLCGS17} 
+\item \bibentry{Colorni2013What-1223003}
+\item \bibentry{Mayag2016A-1168365} 
+%\item \bibentry{Cazenave2015Generalized-1222829} 
+\item \bibentry{DBLP:conf/ki/EdelkampC16}
+\item \bibentry{Cornaz2013Kemeny-1052539}
+\item \bibentry{DBLP:conf/ijcai/FaliszewskiGLLM16}
+\item \bibentry{DBLP:conf/ijcai/BarrotL16} 
+\item \bibentry{Cailloux2016Arguing-1097261}
+\item \bibentry{Gourves2012Congestion-624993}
+\item \bibentry{DBLP:conf/ijcai/AzizLM16}
+%\item \bibentry{DBLP:conf/stacs/BonnetLP16}
+\item \bibentry{DBLP:conf/stacs/FotakisLP16}
+\item \bibentry{DBLP:conf/soda/Jeong0O16}
+\item \bibentry{DBLP:conf/icalp/0002LPRRSS13}
+%\item \bibentry{Lampis2014Parameterized-1298206}
+\item \bibentry{DBLP:conf/atal/LangMSZ17}
+\item \bibentry{DBLP:conf/iscopt/LacroixMM12}
+\item \bibentry{DBLP:conf/codit/SalemTAM16}
+\item \bibentry{DBLP:conf/drcn/DiarrassoubaMM16}
+\item \bibentry{DBLP:conf/codit/MagnoucheMM16}
+\item \bibentry{Mahjoub2012Polyhedral-619459}
+\item \bibentry{Furini2013Hybrid-1307565}
+\item \bibentry{Aissi2014A-775489}
+\item \bibentry{DBLP:conf/ijcai/GalandLP13}
+\item \bibentry{Galand2015Exact-1052488} 
+%\item \bibentry{Abu-Khzam2015On-1017005}
+\item \bibentry{Colazzo2014RDF-629026}
+\item \bibentry{Camacho-Rodriguez2014PAXQuery:-1007886}
+\item \bibentry{DBLP:conf/cikm/Camacho-Rodriguez16}
+\item \bibentry{Gamez2015SPL-TQSSS:-1298429}
+\item \bibentry{DBLP:conf/icsoc/GabrelMM14}
+\item \bibentry{DBLP:conf/icsoc/2015}
+\item \bibentry{DBLP:conf/icsoc/2014w}
+%\item \bibentry{Bojarski2017Structured-1259771}
+\item \bibentry{AngaritaArocha2012FaCETa:-619549}
+\item \bibentry{AngaritaArocha2015Dynamic-1061562}
+\item \bibentry{Mouhoub2014A-1061556}
+\item \bibentry{Mouhoub2015LIDSEARCH:-1061527}
+\item \bibentry{DBLP:conf/eScience/CarvalhoBM16}
+\item \bibentry{DBLP:conf/ssdbm/RiosPFB16}
+\item \bibentry{DBLP:conf/ssdbm/BelhajjameB16}
+\item \bibentry{DBLP:conf/edbt/Belhajjame14}
+\item \bibentry{Missier2013The-1007766}
+%\item \bibentry{DBLP:conf/sigmod/Camacho-RodriguezCM14}
+\item  \bibentry{DBLP:conf/dbpl/ColazzoS15}
+\item \bibentry{DBLP:conf/ipaw/AlperBGK14}
+\item \bibentry{Horev2016Geometry-aware-1241260}
+\item \bibentry{Yamane2016Multitask-1241267}
+%\item \bibentry{FLP2016}
+\item \bibentry{Hmida2016Sampling-1298248}
+\item \bibentry{Hmida2016Hierarchical-1241346}
+\end{enumerate}
+
+%
+%
+%\subsection{Journals}
+%
+%The members of the LAMSADE have published 
+%340 articles in international journals. 
+%
+%
+%\subsection{Books and chapters}
+%
+%
+%Some members have published 8 books \bibentry{Lang2012Raisonnement-619528,Arduin2015Systeme-636803,Negre2015Systemes-635002,Negre2015Information-1007949,LRS2013,
+%Arduin2015Information-636809,
+%DBLP:books/sp/BeheshtiBSGMBGR16,
+%Pigozzi2014Judgment-634703} and have directed the redaction of 
+%3 books \bibentry{Dameri2014Smart-641945,HBCOMSOC2016,Mundler2016Alimentation-1034595}. 
+%
+%%ouvrages \bibentry{Lang2012Raisonnement-619528,Arduin2015Systeme-636803,Negre2015Systemes-635002,Negre2015Information-1007949,LRS2013,
+%%Arduin2015Information-636809,
+%%DBLP:books/sp/BeheshtiBSGMBGR16,
+%%Pigozzi2014Judgment-634703}
+%
+%The members of the LAMSADE have published 
+%44 book chapters. 
+%
+%
+%
+%
+%\subsection{Proceedings and articles in proceedings}
+%
+%Some members of the LAMSADE (D. Grigori, E. Negre, R. Mahjoub, V. Paschos, A. Tsouki\`as, T. Cazenave) 
+%have participated to  the edition of 
+%13 conference proceedings \bibentry{Negre2014Xe-631005,
+%DBLP:conf/ciac/2015,
+%DBLP:conf/aldt/2013,DBLP:conf/icsoc/2015,
+%DBLP:conf/icsoc/2014w,
+%DBLP:conf/ijcai/2015cgw,
+%DBLP:conf/ecai/2014cgw,
+%DBLP:conf/ijcai/2013cgw,
+%DBLP:conf/iscopt/2016,
+%DBLP:conf/iscopt/2014,
+%Younas20164th-1298455,
+%DBLP:conf/iscopt/2012,
+%DBLP:conf/ciac/2017} for ISCO, CIAC, ICSOC, CGW, EDA, and  IEEE Computer Society. 
+%
+%
+%
+%
+%... and contributed to 337 articles in conference proceedings. 
+%
+%
+%
+
+
+
+\subsection{Instrumental and  methodological developments}
+
+
+\subsection{Softwares and experiments}
+
+Highlights:  Two members of the LAMSADE have participated to two national experiments related to the French presidential elections of 2017. 
+\begin{enumerate}
+\item Rida Laraki has participated with primaire.org to an experiment on a voting rule (majority judgment) on the internet
+\item J\'er\^ome  Lang, via the ANR project COCORICO, has participated to an experiment called ``Voter Autrement 2017'' which is about the French presidential election
+\end{enumerate}
+The other contributions are: 
+Daniela Grigori has produced a software for the aggregate search of data and services which has been presented at the conference ESWC'15.  Dario Colazzo has participated to the development of {\em Andromeda}  and the systems  {\em Paxquery} and {\em Pigreuse}.  Members of the LAMSADE such as Michel Zam, Brice Mayag and Alexis Tsouki\`as, are involved in a platform for software tools for decision problems called {\em DECISION DECK}. Hassene Aissi has developed a decision aid tool  for the planification of ad campaigns (for a compagny called OMNICOM). Florian Sikora has developed a software for a challenge, see https://pacechallenge.wordpress.com/. 
+
+
+\subsection{Patents, licences and invention}
+
+\subsection{Reports of technical expertise, products of instances of normalisation}
+
+\subsection{Products of didactic activities}
+
+
+Rida Laraki used his experience in teaching game theory to  write a book entitled ``Bases Math{\'e}matiques de la Th{\'e}orie des Jeux'' \bibentry{LRS2013}.
+
+
+\subsection{Products for the general public}
+
+Highlights:  Two members of the LAMSADE have been significantly solicited by the medias. 
+\begin{enumerate}
+\item Tristan Cazenave has been sollicitated by the following medias about Alphago, Deep learning and Game playing:
+{\em TF1}, {\em France 5}, {\em LCP}, {\em France Info}, {\em Radio Canada}, {\em Korean Television}, {\em Le Monde}, and {\em Le Figaro}
+\item Rida Laraki has been present  in medias such as {\em Pour la Science}, {\em Rue89}, {\em Terra Nova}, {\em The Conversation France}, 
+{\em The Conversation USA}, and {\em Commentaire}, about election systems . Rida Laraki  has made a  popularizing video on Youtube (seen more than 20.000 times): \url{https://www.youtube.com/watch?v=ODuPoepQ1tY}. See also \url{https://www.youtube.com/watch?v=ZoGH7d51bvc} where he appears (seen more than 578.000 times). Rida Laraki was interviewed by {\em le Parisien}, {\em RFI}, {\em RTL}, {\em Le Monde}, {\em Causette}, {\em Science et vie}, {\em Science et avenir}. He also contributed to the MIT Press Blog in 2012.  
+\end{enumerate}
+
+Besides, J\'er\^ome Lang has signed an article in {\em Lib\'eration} ``Vers la fin du scrutin majoritaire \`a deux tours ?'' in April 2017. 
+Juliette Rouchier has signed in 2016 an article in {\em Lib\'eration}: ``Marseille dans la dynamique de la m\'efiance''. 
+
+
+ 
+
+%
+%
+%\subsection{Emissions radio, TV, presse \'ecrite}
+%\begin{enumerate}
+%%\item Cazenave : TF1, France 5, LCP, France Info, Radio Canada, Television Coreenne, Le Monde, Le Figaro…
+%%\item Rouchier : article lib\'eration 2016 
+%\%item Laraki 
+%\begin{enumerate}
+%\item Ne votez pas, jugez». Pour la Science. 
+%\item 2012. Imposture du premier tour : 1km + 1m + 1cm ne font pas 3!. Rue 89.
+%%%\item Laraki (2014). Justice \'electorale: la r\'ealiser en Tunisie. Association des Tunisiens des Grandes Ecoles (ATUGE).
+%\item 2015. "Primaires: et si c'\'etait \`a refaire?". Terra Nova.
+%\item (21 Avril 2016). Pour eviter un nouveau 21 avril, instaurons le « jugement majoritaire », The Conversation France (relaye par Marianne, France Inter, Sud-Ouest). 
+%\item (May 9, 2016) Trump and Clinton victorious: proof that US voting system doesn’t work, The Conversation USA, (followed by HuffPost, rawstory, National Post, Salon.com, New  Republic, etc).
+%\item (\'et\'e 2016). Instaurons le "Jugement Majoritaire". Commentaire. 
+%\item (7 Novembre 2016). "Trump vs Clinton: pourquoi le syst\`eme de vote am\'ericain ne fonctionne pas". Terra Nova.
+%\end{enumerate}
+%\end{enumerate}
+
+
+
+
+%\subsection{Products of popularization}
+
+In 2012, a video presenting the Lamsade has been made and put on the website of the lab.  Maude Manouvrier has participated to the popularization of her work to the  API Days 2013, ``des acteurs de l'\'ecosyst\`eme des APIs, du Cloud Computing et du Bigdata''  Paris, december 2013, video available at \url{https://www.youtube.com/watch?v=CfZ3McBJU-U}. 
+Elsa Negre and Eunjung Kim have written an article for Dauphine Recherches in 2016 and 2017, respectively.  Elsa Negre  also has an article in CGE Grand Angle, in 2017. 
+Florian Sikora has participated to ``Classe \`a Paris'' \url{https://www.espgg.org/Classe-a-Paris}.  
+Laurent Gourv\`es, Julien Lesca and Ana\"elle Wilczynski made a short presentation of their ECAI 2016 article on the website of INS2I.  Stefano Moretti has written an article ``Comment le Lamsade a-t-il \'etabli le mode de
+scrutin de PSL ?'', published in june 2015 in the online magazine education.newstank.fr.
+Jamal Atif has been interviewed on the courses on Big data in a blog called  Business $\&$ Decision. He was invited to debate on Data sciences and automatic learning at the annual convention of {\em Square}, 2016. 
+
+
+
+\subsection{Other products which are specific to a discipline}
+
+\section{Research activities and indices of recognition}
+
+
+\subsection{Editorial activity}
+
+
+Some members of the Lamsade are in the editorial board of scientific journals:
+
+The  20\% selection is: 
+\begin{enumerate}
+\item Mathematical Social Sciences (Remzi Sanver \& Denis Bouyssou) 
+\item International Journal of Game Theory (Rida Laraki)
+\item Social Choice and Welfare (Remzi Sanver \& J\'er\^ome Lang) 
+\item Theoretical Computer Science (Vangelis Paschos)
+\item European Journal of Operational Research  (Vangelis Paschos \& Bernard Roy)
+\item EURO Journal on Decision Processes (Alexis Tsouki\`as \& Bernard Roy \& Denis Bouyssou)
+\item Operational Research: An International Journal  (Vangelis Paschos \& Bernard Roy \& Denis Bouyssou)
+\end{enumerate}
+
+The rest is:   
+\begin{enumerate}
+%\item Mathematical Social Sciences (Remzi Sanver \& Denis Bouyssou) 
+%\item Social Choice and Welfare (Remzi Sanver \& J\'er\^ome Lang) 
+\item Studies in Economic Design  (Remzi Sanver)
+\item Theory and Decision (Remzi Sanver)
+\item INFORMS Journal on Decision Analysis (Alexis Tsouki\`as)
+%\item Theoretical Computer Science (Vangelis Paschos)
+\item Journal of Discrete Algorithms  (Vangelis Paschos)
+%\item European Journal of Operational Research  (Vangelis Paschos \& Bernard Roy)
+\item Computers and Industrial Engineering  (Vangelis Paschos)
+\item  RAIRO - Operations Research  (Ridha Mahjoub \& Vangelis Paschos \& Rida Laraki)
+\item  Foundations of Computing and Decision Sciences  (Vangelis Paschos)
+\item Yugoslav Journal of Operations Research   (Vangelis Paschos) 
+\item Journal of Multicriteria Decision Making in Economics \& Finance  (Vangelis Paschos \& Denis Bouyssou)
+\item  Botanique (Yves Meinard)
+\item Ingenierie des Systemes d'Information (Daniela Grigori)
+\item International Journal of Multicriteria Decision Making (Daniel Vanderpooten \& Bernard Roy)
+\item Computers and Industrial Engineering (Ridha Mahjoub)
+\item EURO Journal on Computational Optimization (Ridha Mahjoub)
+\item International Computer Games Association Journal (Tristan Cazenave)
+\item  Game and Puzzle Design  (Tristan Cazenave)
+\item Journal of Industrial Engineering (Jully Jeunet)
+\item Journal of Project Management  (Jully Jeunet)
+\item Journal of Artificial Intelligence Research (J\'er\^ome Lang)
+\item Artificial Intelligence Journal (J\'er\^ome Lang, until 2016)
+\item Autonomous Agents and Multi-Agent Systems  (J\'er\^ome Lang)
+%\item International Journal of Game Theory (Rida Laraki)
+\item Journal of Dynamics and Games (Rida Laraki)
+%\item  EURO Journal on Decision Processes (Bernard Roy)
+\item  IJ FPRM (Bernard Roy) 
+%\item  International Journal of Multicriteria Decision Making  (Bernard Roy)
+\item  Journal of Multi-Criteria Decision Analysis (Bernard Roy)
+%\item  Operational Research, An International Journal (Bernard Roy \& Denis Bouyssou)
+%\item EURO Journal on Decision Processes (Denis Bouyssou)
+\item Journal of Computational Optimization in Economics and Finance (Denis Bouyssou)
+%\item Journal of Multicriteria Decision Making in Economics \& Finance (Denis Bouyssou)
+\end{enumerate}
+
+Some members of the Lamsade are also involved in special issues:
+\begin{enumerate}
+\item  International Journal of Decision Support System Technology (Elsa Negre 2015)
+\item Journal of Data Mining and Knowledge Discovery (Benjamin Negrevergne, 2017) 
+\item Annals of Operations Research (Fabio Furini)% on Decomposition Methods
+\item Journal of Philosophical Logic (J. Lang 2015) 
+\item Synthese (J. Lang 2013)
+\item International Journal of Game Theory (J. Lang 2013)
+\item Revue d'intelligence artificielle (J. Lang 2012)
+\item ICT-based Strategies for Environmental Conflicts (S. Moretti 2014)
+\item Journal of Logic and Computation (G. Pigozzi 2013)
+\end{enumerate}
+
+
+
+
+%\subsection{Participation \`a des comit\'es \'editoriaux (revues, collections)}
+%\begin{enumerate}
+%\item Remzi Sanver est dans le comit\'e editorial de 3 revues :  Mathematical Social Sciences, Social Choice and Welfare, Theory and Decision.
+%\item Elsa Negre a \'edit\'e un num\'ero sp\'ecial de la revue internationale IJDSST en 2015
+%\item Alexis Tsoukias est dans le comit\'e de deux journaux, EURO
+%Journal on Decision Processes et INFORMS Journal on Decision Analysis. 
+%\item Vangelis Paschos est dans le comit\'e editorial de Theoretical Computer Science, 
+%Journal of Discrete Algorithms, European Journal of Operational Research, Computers and Industrial Engineering, RAIRO - Operations Research, Operational Research: An International Journal, 
+%Foundations of Computing and Decision Sciences, 
+%Yugoslav Journal of Operations Research, 
+%Journal of Multicriteria Decision Making in Economics \& Finance
+%\item Vangelis Paschos a \'edit\'e deux num\'eros sp\'eciaux de Theoretical Computer Science("Exact \& Parameterized Computation – Moderately Exponential \& Parameterized Approximation", vol. 511, 2013 et "Combinatorial Optimization: Theory of algorithms and complexity ‘’, vol. 540-541, 2014).
+%\item Negrevergne : Guest Editor for Journal of Data Mining and Knowledge Discovery (DAMI). 
+%\item Yves Meinard : Comit\'e \'editorial de Botanique %, toute petite revue qui vient seulement de sortir son n°2
+%\item Grigori : Comite de redaction de la revue  ISI (Ingenierie des Systemes d'Information)
+%\item Furini : Guest Editor pour la Special Issue of Annals of Operations Research on Decomposition Methods
+%\item Vanderpooten : International Journal of Multicriteria Decision Making
+%\item Mahjoub 
+%\begin{enumerate} 
+%\item Editor in Chief of RAIRO - Operations Research, June 2011-.
+%\item Area Editor of Computers and Industrial Engineering, Nov 2015-.
+%\item Advisory Editor of EURO Journal on Computational Optimization, July 2011-.
+%\end{enumerate}
+%\item Cazenave \begin{enumerate} 
+%\item  Editor in chief of the ICGA Journal.
+%\item Member of the editorial board of Game and Puzzle Design.
+%\end{enumerate}
+%\item Jeunet  \begin{enumerate} \item Membre du comit\'e  \'editorial de la revue Journal of Industrial Engineering (Hindawi) (2012-)
+%\item Jeunet : Membre du comit\'e \'editorial de la revue Journal of Project Management (Growing Science) (2017-)
+%\end{enumerate}
+%\item Lang \begin{enumerate} \item  Associate editor of Journal of Artificial Intelligence Research until 2015; now in the advisory board. Associate editor of Artificial Intelligence Journal until 2016. Associate editor of Social Choice and Welfare. Associate editor of Autonomous Agents and Multi-Agent Systems.
+%Member of the Editorial Board of Synthese.
+%\item Guest Editor of issues of:
+%Journal of Philosophical Logic (2015) Synthese (2013)
+%International Journal of Game Theory (2013)
+%Revue d'intelligence artificielle (2012)
+%\end{enumerate}
+%\item Moretti  : Guest Editor: Volume 4, Issue 2 Special Issue of the Journal: ICT-based Strategies for Environmental Conflicts
+%\item Pigozzi : numero special “Normative Multiagent Systems” du Journal of Logic and Computation 23(2), 2013.
+%\item Laraki : editeur associ\'e dans Rairo Operations Research, International Journal of Game Theory, Journal of Dynamics and Games
+%\item Roy : EJOR, EJDP, IJFPRM, IJMCDM, JMCDA, ORIJ
+%\item Bouyssou : Membre de l'Editorial Board des revues 
+%\begin{enumerate} \item  EURO Journal on Decision Processes
+%(2012–).
+%\item Mathematical Social Sciences (2010–2016)
+%\item  Journal of Computational Optimization in Economics and Finance (2009–).
+%\item  Operational Research, An International
+%Journal (2007–).
+%\item Journal of Multicriteria Decision Making
+%in Economics \& Finance (2009–)
+%\end{enumerate}
+%\end{enumerate}
+%
+
+
+\subsection{Evaluation}
+
+Members of the LAMSADE are involved in many evaluation processes, and in various contexts: 
+institutions, teams and labs (HCERES) and projects (ANR, Swiss National Science Foundation, Netherlands Organisation for Scientific Research). Besides the editorial activity presented in the previous section, every year, every permanent member of the LAMSADE invests time in voluntary peer reviews of research articles submitted to international and national journals and conference of his/her field.   
+
+
+
+\subsection{Scientific expertise}
+
+%\subsection{Consulting and industrial partners}
+
+Meltem \"Ozt\"urk and Brice Mayag have been working in collaboration with the SNCF. 
+Brice Mayag also  worked as an expert for the ``Haute Autorit\'e de Sant\'e'' from 09/15/2013 to 06/30/2014. Yves Meinard has collaborated with the  departments ``Charente-Maritime'' and ``Ille-et-Vilaine'', GERECO SARL. Daniel Vanderpooten has been working with the DCNS (2012, 2014-2017). Dario Colazzo, Jamal Atif and Florian Yger had a contract with {\em Adway}. Hassene Aissi has worked with OMNICOM. 
+
+
+\subsection{Organization of scientific events}
+The following scientific events were organized by members of the LAMSADE. 
+The highlighted events are international conferences: ISCO, ICSOC, and SING.   
+\begin{itemize} 
+\item International conferences:
+\begin{enumerate} 
+\item SING13 Paris by Stefano Moretti (chair)% and the help of Laurent  Gourv\`es
+\item CIAC 2015 and 2017 (Vangelis Paschos)
+\item APEX 2012 and 2013 (Vangelis Paschos)
+\item JGA 2016 (C. Bazgan and F.Sikora)
+\item 3 editions of KMIKS (Knowledge, Management, Information and Knowledge System) April 2013,  2015, and 2017 (C. Rosenthal-Sabroux)
+\item ISCO 2012, 2014, 2016 (R. Mahjoub)
+\item ECCO XXVI 2013 (B. Ries, D. Cornaz)
+\item ICSOC 2014 (D. Grigori \& M. Manouvrier)
+\item International Conference on Game Theory, State University of New York at Stony Brook, July 15-19 2012 (R. Laraki)
+\item Mathematical Aspects of Game Theory and Applications, June 30 to July 4 2014, Roscoff, France (R. Laraki)
+\end{enumerate}
+
+\item National events:
+\begin{enumerate} 
+\item EDA  2014 (Vichy) by Elsa Negre  
+\item JGA 2016 (C. Bazgan and F. Sikora)
+\end{enumerate}
+\item Workshops
+\begin{enumerate} 
+\item Workshop on games, algorithms and optimization in june 2013 (L. Gourv\`es)
+\item Workshop “Th\'eorie algorithmique de la décision et des jeux” in september 2015 and november 2016 (S. Moretti)
+\item Journ\'ee de Th\'eorie du Choix Social et de l'Agr\'egation des Jugements (GREGHEC-LAMSADE) in april 2012 (G. Pigozzi)
+\item 2 colloquia at DIMACS in september 2013 and april 2014 (A. Tsouki\`as)
+\item Peace studies workshops in 2013 and 2015 (\"Ozt\"urk \& Tsouki\`as)  
+\item Judgment Aggregation for Artiﬁcial Intelligence at Schloss Dagstuhl, May 2014 (G. Pigozzi)
+\item Fair Division at Schloss Dagstuhl in June 2016 (J. Lang)
+\item Games and Strategy in Paris. International Conference for Sylvain Sorin sixties. Institut Henri Poincar\'e, June 11-13, 2012
+\item Fair Decisions: In Celebration of Michel Balinski's 2013 von Neumann Theory Prize, February 11, 2014, Ecole Polytechnique, (R. Laraki)
+\item Celebration in honor of Michel Balinski’s 78 years, State University of New York at Stony Brook, July 17-18 2012 (R. Laraki)
+\item Journ\'ee des Anciens Theoriciens du Laboratoire d'Econometrie de l'Ecole Polytechnique, 8 Octobre 2015 (R. Laraki) 
+\end{enumerate}
+
+\item Doctoral schools
+
+\begin{enumerate} 
+\item Spring school on Algorithmic Game Theory in  june 2013 (L. Gourv\`es)
+%\item \'Ecole th\'ematique SNACMAN 2017 (E. Negre)
+\end{enumerate}
+
+\item Seminars
+
+\begin{enumerate} 
+\item Journ\'ees franciliennes de la recherche opérationnelle (F. Sikora \& L. Galand)
+\end{enumerate}
+\end{itemize}
+
+
+%\item Alexis Tsoukias a organis\'e   
+%http://www.lamsade.dauphine.fr/cipp, 28/03/2013 et 04/12/2013 (projet CIPP PSL)
+%
+%http://www.lamsade.dauphine.fr/dipp 21-22/10/2014 (projet DIPP PEPS/PSL/CNRS)
+%http://www.gdr3720.fr deux colloques 14-15 et 16/12/2015 en coopération avec le GDR Policy Analytics et le DIMACS
+%
+%\item Laraki \begin{enumerate} 
+%\end{enumerate}
+%\end{enumerate}
+
+
+\subsection{Post-docs \& hosted researchers} %  Invited Professors and Doctor Honoris Causa}
+
+The LAMSADE has hosted (or is currently hosting) the following list of post-doct researchers: 
+\begin{enumerate}
+\item 
+Diodato Ferraioli (ANR COCA), 
+\item Irene Pluchinotta (INDOPP , PSL),  
+\item Giovanna Fancello (MAPP, PSL), 
+\item Abhinav Srivastav (MULTIFAC, PSL), 
+\item Arman Boyaci (PHC), 
+\item Diana Sasaki (Brazilian Grant), 
+\item George Stamoulis (Swiss Grant), 
+\item Fabien Teytaud (ANR EXPLO-RA), 
+\item Kerstin D\"achert (PHC), 
+\item Giovanni Sileno (ANR LOGIMA), 
+\item Giulia Lucertini (Ineris), 
+\item De Almada Sanchez Ricardo (ANR LOGIMA),
+\item Fran\c cois Durand (ANR COCORICO). 
+\end{enumerate}
+
+On the basis of propositions by the members of the LAMSADE, 3 renown researchers became Doctor Honoris Causa of the universit\'e Paris-Dauphine: Fred Roberts (Rutgers), Claudia Bauzer Meideros (IC UNICAMP), and Christos Papadimitriou (UC Berkeley). 
+
+
+
+
+Between 2012 and 2017, the LAMSADE has received 84 invited professors for 97 months. These collaborations yielded the following selection of publications: 
+\begin{enumerate}
+\item \bibentry{DBLP:conf/eScience/CarvalhoBM16}
+\item \bibentry{DBLP:journals/jcst/ConstantinMLRS16}
+\item \bibentry{AngaritaArocha2012FaCETa:-619549}
+\item \bibentry{cesari2016generalized}
+\item \bibentry{Gourves2013The-1204646}
+\item \bibentry{Moretti2014ICT-based-626421}
+\item \bibentry{Ries2013Perfectness-626126}
+\item \bibentry{DBLP:conf/wine/DarmannEKLSW12}
+\item \bibentry{Bazgan2014Parameterized-628151}
+\item \bibentry{DBLP:conf/bigdataconf/JajodiaLS16}
+\item \bibentry{Aissi2014A-775489}
+\item \bibentry{DBLP:journals/eor/GabrelMT14}
+\item \bibentry{Agnetis2014Coordination-635422}
+\item \bibentry{AbouEisha2014A-1222721}
+\item \bibentry{Bouyssou2015Aiding-1223019}
+\item \bibentry{DBLP:conf/walcom/BourgeoisGLMP13}
+\item \bibentry{Angelelli2014Complexity-1204485}
+\item \bibentry{Bouyssou2015Building-775591}
+\item \bibentry{Klamroth2015On-634730}
+\item \bibentry{Bazgan2015New-1204555}
+\item \bibentry{Seymour2012Analyzing-614899}
+\item \bibentry{Dall'Aglio2016Orders-1149453}
+\item \bibentry{Abu-Khzam2016Data-1204494}
+\item \bibentry{DBLP:conf/atal/LangMSZ17}
+\item \bibentry{Cornaz2017151}
+\item \bibentry{Faria2015The-1204671}
+\item \bibentry{Bazgan2015A-1204562}
+\item \bibentry{DBLP:journals/eor/AgnetisAFK15}
+\item \bibentry{Delias2015Discovering-1223048}
+\item \bibentry{DBLP:conf/ijcai/GrecoL15}
+\item \bibentry{Aissi2014A-775489}
+\item \bibentry{DBLP:conf/ijcai/PepelsCW15}
+\item \bibentry{Vanderpooten2017Covers-1168175}
+\item \bibentry{DBLP:conf/wg/0002MS15}
+\item \bibentry{DBLP:conf/iwoca/BazganBCFJKLLMP16}
+\item \bibentry{DBLP:conf/cpaior/FuriniLS15}
+\item \bibentry{Fotakis2016Conference-1204616}
+\item \bibentry{DBLP:conf/aaim/BazganBCFJKLLMP16}
+\item \bibentry{DBLP:conf/edbt/BaaziziLCGS17}
+\item \bibentry{Blin2012Complexity-1078872}
+\item \bibentry{Caragiannis2016Achieving-1025947}
+\item \bibentry{Belton2013Policy-624015}
+\item \bibentry{Bouyssou2015A-634565}
+\item \bibentry{Diner2015Contraction-973090}
+\item \bibentry{DBLP:conf/aaai/AzizBLM17}
+\item \bibentry{DBLP:journals/ai/SkowronFL16}
+\item \bibentry{DBLP:conf/kr/EndrissGHL16}
+\item \bibentry{DBLP:conf/soda/Jeong0O16}
+\item \bibentry{Bazgan2016On-1204525}
+\item \bibentry{DBLP:journals/coap/FrangioniFG16}
+\item \bibentry{Bojarski2017Structured-1259771}
+\item \bibentry{DBLP:conf/edbt/BaaziziLCGS17}
+\end{enumerate}
+
+\subsection{Interactions with socio-economic players}
+
+Dario Colazzo, Jamal Atif and Florian Yger had a contract with {\em Adway}. Hassene Aissi has worked with OMNICOM. 
+
+
+
+
+\medskip
+The following table provides the PhD thesis whose candidate is/was supported with a CIFRE grant. 
+
+
+\begin{center}
+\begin{tabular}{| l | l | l |}
+\hline
+\multicolumn{3}{|c|}{Cifre Grants}\\
+\hline
+Supervisor(s) at LAMSADE& PhD Student& Compagny\\
+\hline
+W. Litwin&R. Haddad&Syrokko\\
+%R. Mahjoub&M. Ould&?\\
+V. Giard&M. Sali&Reginov\\
+M. \"Ozt\"urk&L. Mammeri&SNCF\\
+R. Mahjoub&A. Benhamiche&Orange\\
+T. Cazenave&A. Menif&Sagem/Fondation St Cyr\\
+D. Vanderpooten&S. Kaddani& DCNS\\
+V. Giard&C. Chatras&Reginov\\
+C. Rosenthal-Sabroux&L. Atif&Talent Soft\\
+D. Colazzo&P-H. Perrin&Treize 37\\
+V. Gabrel \& F. Furini&X. Chen&Decision Brain\\
+A. Tsouki\`as&R. Touret&Meta Conseil\\
+R. Mahjoub&Y. Naghmouchi&Orange\\
+C. Bazgan&P. Baujean&Orange\\
+D. Grigori&Z. Aloulen&Agilab\\
+F. Furini \& I. Ljubic&A. Mouaci&Orange\\
+A. Tsouki\`as \& B. Mayag \& Y. Meinard&A. Richard&H\^opitaux de Lyon\\
+D. Colazzo \& E. Negre&Z. Vahidi Ferdoussi&Coheris\\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Contracts funded by public institutions or charitable institutions}
+
+The LAMSADE is involved, mainly as cordinator, of the following projects:
+\begin{enumerate}
+\item 
+European and international contracts: %s (ERC, H2020, etc.) et internationaux (NSF, JSPS, NIH, banque mondiale, FAO, etc.)}
+\begin{enumerate}
+\item France-Berkeley Funds (V. Paschos), sept. 2015 - aug. 2016 
+\item European Project Pierre et Marie Curie GEO-Safe (V. Paschos) 2016-2020
+\item NSF project with the DIMACS (MPE13+, A. Tsouki\`as)
+\item Wolfgang Pauli Institute Thematic Program (Austria) 2017 (Eunjung Kim) 
+\item Participation to a project STIC Amsud (O. Cailloux) oct. 2016 - sept. 2018%We aim at developing automated techniques for inferring phenotypes from genetic data, for the model type Drosophila Melanogaster, using machine learning techniques joint with expert preference elicitation.
+\item G. Pigozzi is partner in a project of DFG SEGA (sept. 2016-2019)
+\item Coordination of a France-Chile project 2015-2018 (R. Laraki) 
+\item 2010-2013 Participation to a bi-national project CAPES-COFECUB AMIB (M. Rukoz)  
+\item  2012, Responsible in France with Yudith Cardinale (Venezuela) of a binational project  (France-Venezuela) CNRS-FONACIT (M. Rukoz)
+\end{enumerate}
+\item ANR
+ \begin{enumerate}
+ \item ANR COCORICO 2014-2018
+ \item ANR GUEPARD 2009-2013
+ \item ANR AMANDE 2013-2017
+ \item ANR CAIR 2015-2017
+ \item ANR TODO 2009-2013
+ \item ANR COCA 2009-2013
+ \item ANR LOGIMA 2012-2017
+ \item ANR NETLEARN 2013-2017 
+ \item ANR EXPLO-RA 2008-2012
+ \end{enumerate}
+\item Programme d'investissements d'avenir (PIA) 
+\begin{enumerate}
+\item Remzi Sanver is the coordinator of a PSL project called MIFID (2017-2019)
+\item  Vangelis Paschos is the coordinator of a PSL project called Multifac (2017-2018)
+\item  Alexis Tsouki\`as has participated, or participates, to several 
+projects called CIPP (jan. 2013-jan. 2014), DIPP (PEPS CNRS/PSL), INDOPP (may 2015-oct. 2018) and MAPP (oct. 2015 - jan. 2018)
+\end{enumerate}
+\item PEPS
+\begin{enumerate}
+\item PEPS JCJC 2016: EQUiPER %(Furini)
+\item PEPS JCJC 2016: APPEAR %(Sikora, Lampis,Lesca : )
+\item PEPS JCJC 2017: ADDICTED %Sikora Yger Negrevergne : 
+%\item Toubaline : Je participe a un projet PGMO (Programme Gaspard Monge pour l'optimisation et la recherche operationnelle) en collaboration avec L’ecole Polytechnique (meneur du projet), EDF R\&D et l'Universite de Sfax.
+%\item GDR-RO project with CNAM and LRI, ``minimum $d$-blocker for the chromatic number of a graph'', 2012.
+\end{enumerate}
+\item PGMO
+\begin{enumerate}
+\item J\'er\^ome Monnot has a PGMO Project  (2016-2017).
+\item Ridha Mahjoub has a PGMO Project (2014-2017).
+\item Fabio Furini has a PGMO Project (2014-2018).
+\end{enumerate}
+%PGMO 2016 (2016-2017) entitled Stability versus Optimality in Dynamic Environment
+%Algorithmics.
+%\item Mahjoub : Project with Gaspard Monge Program for Optimization and operations research (PGMO) (2014-2017).
+%\item Laraki : De 2010 \`a 2015 a \'et\'e coordinateur d’\'equipe au niveau de Polytechnique d’une ANR Blanc Jeudy (Jeux Dynamiques) 
+%\item Moretti :  Orchestration d’algorithmes d’apprentissage distribués pour la gestion des ressources dans les
+%réseaux mobiles(NETLEARN) ANR-13-INFR-004, financed by: ANR INFRA, start date:
+%12/2013, duration: 36 months, Main activities and responsibilities: unit coordinator.
+%\item Atif : 
+\item Hubert Curien Parterships (PHC)
+\begin{enumerate}
+\item PHC Procope 2016-17 Wuppertal (C. Bazgan \& D. Vanderpooten)
+\item PHC Cedre  2014-15 with the Lebanese American University (C. Bazgan) 
+\item PHC 2015 Proteus (E-J Kim)
+\item PHC Sakura: GRAPA  2017-2018 (F. Sikora \& M. Lampis \&  E-J Kim)
+\item PHC Utique (D. Grigori) (2015-2017) %"Integration de Masses de Donnees en Utilisant les Workflows Semantiques en Environnements Cloud"
+\item PHC BOSPHORE (Turkey - France) (2012-2013) (J. Monnot \& B. Ries)  
+\item PHC with the university of LUISS,  Italy 2016 (M. Nunez)
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+\subsection{Indices of recognition and distinctions}
+
+\subsubsection{Prizes and distinctions}
+\begin{enumerate}
+\item
+In 2017, J\'er\^ome Lang and Eun-Jung Kim  received from the CNRS a silver medal and a bronze medal, respectively. 
+\item
+
+Bernard Roy received the EURO distinguished service medal in July 2015. 
+\item 
+
+Cristina  Bazgan has been a junior  member of Institut Universitaire de France 2011-2016, and Vangelis Paschos has been a senior  member of Institut Universitaire de France from 2010 to 2015. 
+
+\item
+St\'ephane Airiau had a best paper award at AAMAS 2016 for his article entitled {\em Rationalisation of Profiles of Abstract Argumentation Frameworks}, joint work with Elise Bonzon, Ulle Endriss, Nicolas Maudet, and Julien Rossit.
+\end{enumerate}
+
+
+\subsubsection{Responsabilities in learned societies}
+Meltem \"Ozt\"urk  is part of the ROADEF council. Lucie Galand belongs to the committes (direction and scientific) of the GdR RO. Since 2016, Rida Laraki is responsible of the SMAI Mode. 
+
+
+\subsubsection{Invitations to conferences abroad \& international research visits}
+
+\noindent \textbf{Invited talks}
+\begin{enumerate}
+\item Elsa Negre has been invited tutorial speaker at 2 international conferences: HICSS  2014 and KMIKS 2015
+\item Alexis Tsouki\`as made invited tutorials at RECSYS 2013 (Hong Kong), EEEE 2013 (Greece),
+EURO WG DSS 2013 (Greece), ICCSA 2014 (Portugal), AIRO 2014 (Italy), BCSI 2015
+(Singapour)
+\item Vangelis Paschos was plenary speaker at the  Athens Colloquim on Algorithms and Complexity ACAC (2012, 2014, 2016)  and the  
+    International Symposium and National Conference on Operational Research of the Hellenic Operational Research Society, 2014
+\item Benjamin Negrevergne was invited to give a talk at the "Spring meeting on Mining and Learning (SMiLee 2017)" 29-31 May 2017 in Oostende, Belgium
+\item Daniela Grigori participated to the panels "Research opportunities in Service Oriented Computing" and "Internet of Things Services" at ICSOC 2015 
+%\item Grigori :  articipation a deux jurys de these a l'etranger (australie + pays bas)
+\item Michail Lampis was invited to give a talk at ACAC 2016 (Greece) and at a workshop organized by
+the Simons Insitute at Berkeley in november 2015
+\item Fabio Furini has been invited at the university of Vienna for giving seminars  for the doctoral school
+\item Laurent Gourv\`es has been invited at the Politecnico di Milano in march 2014 for giving lectures, and invited
+    speaker at the Summer School on Game Theory and Algorithms, Campione d'Italia, 7-11 September 2015
+%\item Aissi : invit\'e en avril 2014 par Tom McCormick et Maurice Queyranne de l'Universit\'e de British Columbia (Canada).
+\item Ridha Mahjoub was plenary speaker at  ORPA’2015,  Algiers, Algeria, April 2015,  Operations Research Workshop, Tizi Ouzou, Algeria, October 2013 ; Optimization Days, Oran, Algeria, November 2012.
+\item Tristan Cazenave was invited at Cape Town for a conference IEEE SSCI (2015)%, \`a l'universit\'e d'Essex.
+\item J\'er\^ome Lang gave the following invited talks: \begin{enumerate} \item Fourth International Conference on Algorithmic Decision Theory (ADT-15), joint invited talk with 13th International Conference on Logic Programming and Non-monotonic Reasoning (LPNMR 15, Lexington, USA, September 2015) \item  Logic for Social Behaviour 3 (Z\"urich, February 2016) \item  8th International Conference on Agents and Artificial Intelligence (ICAART 2016, Rome, February 2016) \item 
+ 15th International Conference on Principles of Knowledge Representation and Reasoning (KR 2016, Cape Town, April 2016) \item  
+ Fourth International Workshop on Market Design Technologies for Sustainable Development (Yokohama, August 2016)
+\item  Workshop DA2PL'2016, From Multiple Criteria Decision Aid to Preference Learning (Paderborn, November 2016)
+\item  Eighth Workshop on "Hybrid Reasoning for Intelligent Systems" (Dresden, November 2016).
+\end{enumerate}
+\item Remzi Sanver was invited speaker at the annual congress of the Balkanian society of neurosurgery
+
+%\item Lang : S\'ejours longs à l'\'etranger : University of Auckland, F\'evrier 2012, 3 semaines ;  Nanyang Technological University, Janvier 2013, 3 semaines. Plusieurs séjours à D\"usseldorf dans le cadre d'un projet PHC PROCOPE.
+\item Gabriella Pigozzi has been invited to give the following talks: \begin{enumerate} \item "Changing norms" at the workshop Logic In Bochum III, Ruhr University Bochum, Germany, May 2017.
+\item  Tutorial “The logic of group decision : An introduction to judgment aggregation” at the Conference PhDs in Logic IX, Ruhr University Bochum, Germany, May 2017.
+\item  “Changing norms” at the 13th International Conference on Deontic Logic and Normative Systems (DEON), Bayreuth, Germany, July 2016.
+\item   “Compatible Group Decisions” at the International Symposium on Aggregation and Structures (ISAS), Luxembourg, July 2016.
+\item  “A framework for revising and contracting rules” at the von Wright Centenary Sym-posium, Helsinki, May 2016.
+\item  “A framework for norm change”, keynote speaker at Trends in Logic XV : Logics for Social Behaviour, Delft University of Technology, the Netherlands, June 2015.
+\item  “A tutorial on Judgment Aggregation” (with D. Grossi), Logics for Social Behaviour workshop, Lorentz Center, November 2014.
+\item   “Group Argumentation”, Graphs and Decisions, University of Luxembourg, 27-29 October 2014.
+\item  “Logic in Group Decisions”, Trends in Logic XIV : The Road Less Travelled Oﬀ-stream applications of formal methods, Ghent University, Belgium, July 8-11, 2014. 
+\item  “Pareto Optimality and Strategy Proofness in Group Argument Evaluation” (with E. Awad, M. Caminada, M. Podlaszewski, and I. Rahwan), COST Action IC1205 Workshop on Computational Social Choice, Barcelona, Spain, 16-18 October 2013.
+\item  “Compatible group decisions”, Seventh International Summer School on Aggregation Operators (AGOP 2013), Pamplona, Spain, 16-20 July 2013.
+\item  “Independence revisited”, DIMACS Workshop on Algorithmic Aspects of Information Fusion (WAIF), Rutgers University, US, November 2012.
+\item  “Compatible group decisions”, 2012 European Mathematical Psychology Group Meeting (EMPG 2012), University of Navarra, Pamplona, Spain, 29-31 August 2012.
+\item  “Legitimate judgment aggregation” (joint work with M. Caminada and U. Grandi), Workshop Judgment Aggregation: Computational Perspectives, University of Luxembourg, Luxembourg, 1 February 2012.
+\end{enumerate}
+%\item Nunez : s\'ejours \`a l'\'etranger (Rochester, US Fevrier 2017 et UQAM, Montreal Avril 2016)
+%\item Laraki : professeur invit\'e (1 mois) \`a l’universit\'e de Yale en 2016 (departement d’economie).
+%Professeur invit\'e d’honneur \`a l’universit\'e de Liverpool depuis 2016 (management school).
+\item Rida Laraki has been invited to give the following lectures and talks:
+\begin{enumerate}
+\item 2017 School on Equilibria in Games: Existence, Selection and Dynamics Course on Discontinuous Games, Santiago, Chile
+\item 2015 METIS’2016: the 8th International Spring School on Distributed Systems, Course on Majority Judgment, Marrakech, Morocco
+\item 2015 The 39th Conference on the Mathematics of Operations Research Course on Majority Judgment, Lunteren, Holland
+\item 2015 Summer School in Discrete Mathematics Course on Majority Judgment, Valparaiso, Chile
+\item 2013 The 8th Summer School in Signal and Image Processing Course on Mathematical Foundations of Game Theory Peyresq, France
+\item 2012 School and Workshop on Game Theory and Applications Course on Majority Judgment, Valparaiso, Chile
+\end{enumerate}
+%\item Laraki invit\'e \`a des conf\'erences nationales et internationales :
+%\begin{enumerate}
+%\item 2017 Tilburg, Santiago, Lyon.
+%\item 2016 Paris, Saint-Petersbourg, Luchon, Montpellier, Toulouse
+%\item 2015 Singapour, Cambridge, New York, Paris, Grenoble, Oxford
+%\item 2014 Rennes, Marseille, Maastricht
+%\item 2013 Roscoff, Santiago, Erice, Bonn, New York, Grenoble
+%\item 2012 Paris, collège de France
+%\end{enumerate}
+ \item Marta Rukoz has been invited to give 
+12 hours of lectures on Big data and no-Sql data bases at the Central University of Venezuela  (2015)% aux enseignants et étudiants de Bac+6 et Bac+7
+
+\item Stefano Moretti has been invited for the following presentations : 
+\begin{enumerate}
+\item  On social rankings and their properties, Invited speaker, Advances in Decision Making Workshop, Paris, 3-4 February 2016.
+\item      Cooperative game theory for conflict resolution: how to address the issues of stability, fairness and
+    democracy, Invited speaker, Peace Studies Workshop, Paris, 19-20 November 2015.
+\item      On some applications of Coalitional games, Plan Apoyo Doctorado, Invited speaker, PhD course at the Instituto de
+    Matematicas Universidad de Sevilla Antonio de C. Brzezicki, Spain, 23-24 November 2015.
+\item      An introduction to cooperative games and to connection situations; Introduction to strategic games, Invited
+    speaker, Summer School on Game Theory and Algorithms, Campione d’Italia, Italy, 7-11 September 2015.
+\item      Ranking players in an ordinal coalitional framework, Invited speaker, French Symposium on Games,
+    Universit\'e Paris Diderot, 26 - 30 May 2015.
+\item      Coalitional games for energy saving in telecommunication networks, Invited speaker, Summer School on
+    Game Theory and Health Management, Campione d’Italia, Italy, 7-12 September 2014.
+\item      On some applications of Coalitional games, Game theoretical models for engineering, Invited speaker, PhD course at Politecnico di Milano, 24-26 Mars 2014.
+\item      Coalitional games applied to large biological data sets, Invited speaker, Workshop on Modeling and
+    Analysis of Biological Networks, an associate workshop of the International Environmental Omics Synthesis
+    Conference (iEOS 2013), Cardiff, UK, 11 September 2013.
+\item      Coalitional games on networks and Coalitional games applied to computational biology, Invited speaker
+    during the Summer School on Game Theory and Health Management, Campione d’Italia, Italy, 1-6
+    September 2013
+\item      On the problem of coordinating self-interested agents placed on a network to realize a socially optimal
+   system, Workshop Game Theory at the Universities of Milan III, Invited speaker, Politecnico di Milano, Dipartimento di
+   Matematica, 23-24 May 2013.
+\item      Ranking sets of objects using the Shapley value and other regular semivalues, Invited speaker, DIMACS Workshop
+    on Algorithmic Aspects of Information Fusion (WAIF), DIMACS Center, Rutgers University, USA, 8-9 November 2012.
+\end{enumerate}
+%\item Litwin : visites annuelles d'1-2 mois selon l'ann\'ee au centre de s\'ecurit\'e de syst\`eme d'information (CSIS) \`a l'universit\'e George Mason (GMU)
+
+\item Jamal Atif gave a tutorial at IJCAI 2016 and another tutorial at   %https://perso.telecom-paristech.fr/bloch/IJCAI/TutorialIJCAI2016.html
+ICPRAM 2017 %: http://www.icpram.org/Tutorials.aspx?y=2017
+\item Julien Lesca has been invited to present his work at the COST Action meeting in Glasgow (2015)
+\end{enumerate}
+
+\noindent \textbf{Visits}~\begin{enumerate}
+\item Hassene Aissi has been invited in April 2014 by Tom McCormick and Maurice Queyranne at the University of British Columbia (Canada).
+\item Ridha Mahjoub has been invited at the following places \begin{enumerate} \item Sultan Qaboos University, Muscat, (Oman), February-April, 2017
+\item Bilkent University, Ankara, Turkey (April-September 2016).
+\item Universite des Sciences, de Technologie et de Medecine, Nouakchott, Mauritania (January 2016).          
+\item Universite Farhat Abbas, Setif, Algeria (October 2015).
+\item Sultan Qaboos University, Muscat, (Oman), February-May, 2015.
+\item Universidade Federal of Fluminense, Niteroi, Rio de Janeiro (Brasil), April 2014.
+\item Sauder School of Business, Universiy of British Columbia, Vancouver (Canada),   April-may 2013. 
+\end{enumerate}
+\item Laurent Gourv\`es has been invited at the NTUA in june 2015 
+\item Remzi Sanver has made several stays abroad %a fait plusieurs s\'ejours \`a l'\'etranger.
+\item Tristan Cazenave has been invited in Taiwan by several universities, and the University of Essex.
+\item J\'er\^ome Lang made the following research visits: University of Auckland, February 2012;  Nanyang Technological University, January 2013,and several stays at D\"usseldorf
+\item Matias Nunez made the following research visits: Rochester, US February 2017 and UQAM, Montreal April 2016
+\item Rida Laraki was invited professor (1 month) at  Yale in 2016. He is also regularly invited at the university of Liverpool since 2016 (management school).
+ \item Marta Rukoz  made in 2015 a 15 day visit at the  Central University of Venezuela, and in  2012 and 2013 (for 1 month) at the University Simon Bolivar' (Venezuela).
+\item Witold Litwin has made annual visits (1-2 months) at the George Mason University (GMU)
+\item Julien Lesca has been invited 	in Budapest by Peter Biro in 2016 (2 weeks)
+\end{enumerate}
+\bibliography{lamsade}
+\end{document}

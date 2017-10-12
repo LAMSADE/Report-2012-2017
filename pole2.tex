@@ -1,0 +1,241 @@
+% !TeX root = rapport.tex
+Combinatorial Optimization problems arise from various fields like Telecommunications (Network Planning and Design, Survivability...), Web Services, Transportation (Traffic Control, Aircraft Routing, Train Timetabling), or even economics (social choice).
+The \emph{efficiency} of algorithms designed to solve them is certificated either by numerical experiments, or by theoretical results. The problems we deal with consists in finding an optimal element in a (finite) set of exponential size; therefore the main issue is computational complexity.  
+%Complexity of algorithms is here the main paradigm: in a finite set, but of exponential size, we try to determine in a polynomial time, an optimal element. 
+
+When facing a NP-hard problem, one option is to reduce its difficulty to see what can be done.
+Naturally, one relaxes the feasible set to solve its linear programming relaxation, or to design cutting-plane algorithms.
+One can also relax the notion of optimality to design approximation algorithms, or even relax the notion of time to identify fixed-parameter tractable problems, or problems with low-exponential algorithms.
+
+When facing an easy problem one naturally investigates generalizations to see what can still be done.
+Robust Optimization arises when there is uncertainty on the data.
+Multi-objective Combinatorial Optimization arises when a solution can be evaluated in several different manners.
+
+Team 2,``Algorithms, Combinatorial Optimization'', includes two projects, AGaPe and Mathis. We also describe a third one, MOCO, which is common with Team~1. (Other projects in common with other teams are described in \cref{team1,team3}.)
+The combinatorial optimization algorithms designed are tested to investigate their efficiency in practise.
+Concerning the theoretical aspects, Mathis focuses on relaxations (linear or semi-definite positive) of the feasible set, and on robustness of solutions.
+AGaPe focuses on approximation or low-exponential algorithms and on fixed-parameter tractable problems, and
+MOCO focuses on multi-objective problems.
+
+\subsection{AGaPe: Algorithms with Performance Guarantee}
+
+The research activities of the AGaPe team are structured around three main research axes, namely
+\begin{itemize}
+\item Worst case complexity of combinatorial problems;
+\item Efficient solutions of intractable combinatorial problems;
+\item Dynamic models for combinatorial optimization (including robustness).
+\end{itemize}
+
+About the \textit{worst case complexity of combinatorial problems}, the research follows 
+%The research related mostly to the axis \textit{Worst case complexity of combinatorial problems}, follows 
+two major paradigms: the \textit{standard} paradigm, where complexity is evaluated with respect to the size of the instance and the \textit{parameterized} paradigm, where complexity is evaluated with respect to some structural parameter of the problem dealt. For instance, when dealing with graph-problems, such parameters can be the so-called standard one (the value of the optimal solution), the treewidth, or the vertex cover number etc. of the input graph; other parameters can be specific to the problem at hand.
+%instance definition of the problems handled can be used as well. 
+Publications~\cite{Bazgan2014Parameterized-628151,DBLP:conf/aaim/BazganBCFJKLLMP16,DBLP:journals/algorithmica/BonnetEPT15,Lampis2014The-1298210} contain some representative work relative to this aspect of the research activity of  AGaPe.
+
+%\medskip
+
+The research by the  members of AGaPe on \textit{Efficient solution of intractable combinatorial problems} joins two complementary thematics:
+\begin{enumerate}
+\item\label{one} Exact solution of NP-hard problems;
+\item Approximate solution of such problems.
+\end{enumerate}
+
+As far as determining an exact solution is concerned, key issues are
+%Exact solution topics include 
+the development of exact algorithms with non-trivial upper and lower complexity bounds 
+%established 
+leaving a gap as small as possible (both for the standard and the parameterized frameworks). Item~\ref{one} is, in fact, a natural extension (and completion) to the \textit{Worst case complexity of combinatorial problems} axis. 
+
+%\smallskip
+
+The thematics of \textit{Approximate solution of NP-hard problems} is mostly developed following two research strands: \textit{polynomial approximation} and \textit{super-polynomial approximation}. \textit{Polynomial approximation} is the corner stone of the research group of AGaPe. In this approach, we have to make trade-offs between the computational complexity and the quality of the approximation.
+%the solution precision is relaxed to trade-off with the rapidity of computing feasible solutions (in polynomial time). 
+Until now, the classical research in the area assumed that the approximation algorithms had to be polynomial time computable. Since 2008, in AGaPe, we have largely contributed to the development of several alternative approximation approaches, where the approximation algorithms are allowed to be exponential in various ways, which leads to three major fields: 
+%trying the bridge the gap between ``rapidity of feasible solutions' computation~- quality of the solutions' values obtained, by setting several models, such as
+\textit{moderately exponential approximation}, \textit{parameterized approximation}, and \textit{sub-exponential approximation}. The basic question in any of these models is what is possible/impossible to be done within each model and what is the difference between results achieved therein with respect to analogous results in polynomial approximation.
+
+%\medskip
+
+Our work in \textit{Dynamic models for combinatorial optimization} is developed under three basic complementary aspects: \textit{Probabilistic combinatorial optimization}, \textit{Reoptimization}, and \textit{Temporal optimization}, where the input data are either given only with some presence probability, or they can change during the solution process. The main objective for all these approaches is to compute robust solutions, i.e. a good (under some predefined criterion) solution under all (or at least the most of) scenarii. 
+
+%\medskip
+
+%The  \textit{Algorithmic games and combinatorial optimization} axis is actually a kind of matching between algorithmic game theory and/or computational social choice, and combinatorial optimization - in particular polynomial approximation. Several combinatorial problems as facility location or allocation problems can be formulated and handled under such game settings, giving rise to very interesting and natural computational problems, to be characterized from a complexity point of view and to solve by efficient algorithms. 
+
+%\subsubsection{Significant publications}
+
+Since almost all the publications of the project are transversal to several research axes of the group it is very hard to enter them as proper publications of a single research axis. A list of significant publications is the following: \cite{Abu-Khzam2016Data-1204494, DBLP:conf/ijcai/AzizLM16, Bazgan2017Structural-1204463, DBLP:journals/algorithmica/BonnetE0P15, DBLP:journals/algorithmica/BonnetEPT15, DBLP:journals/algorithmica/BourgeoisEPR12, DBLP:conf/stacs/BonnetLP16, Crowston2014Satisfying-904498, DBLP:journals/algorithmica/EscoffierGM17, DBLP:conf/ijcai/FaliszewskiGLLM16,DBLP:conf/stacs/FotakisLP16, DBLP:conf/soda/Jeong0O16, DBLP:journals/algorithmica/GutinKSSY12, Gutin2012Parameterized-904512, Guillemot2013Finding-1017097, Karpinski2015New-1298222, DBLP:conf/icalp/0002LPRRSS13, Kim2015A-619500, Lampis2014Parameterized-1298206, DBLP:conf/atal/LangMSZ17}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Mathis: Mathematical Programming and Discrete Structures}
+
+An important part of NP-hard problems can be encoded as Integer Linear Programs (ILP), that is, of the form
+$\max\{c^\top x:$ 
+$Ax\le a$, 
+$x$
+ integer$\}$
+ while polynomial problems are often Linear Programs (LP) of the form
+ $\max\{c^\top x:$ 
+ $Bx\le b\}$, however the convex hull of the solutions of the ILP can always be described by linear inequalities.
+ For instance 
+ {\footnotesize
+ $$
+ \left\{
+ \begin{array}{rrrl}
+  x_1, &x_2,& x_3 & \ge 0\\
+ x_1 & +x_2 & &\le 1\\
+ & x_2 & +x_3  &\le 1\\
+ x_1 & & +x_3  &\le 1
+  \end{array}
+ \right.
+ =
+  conv.hull\Big\{
+ {\tiny
+ \left(\begin{array}{c}0\\0\\0\end{array}\right)
+ \left(\begin{array}{c}1\\0\\0\end{array}\right)
+ \left(\begin{array}{c}0\\1\\0\end{array}\right)
+ \left(\begin{array}{c}0\\0\\1\end{array}\right)
+  \left(\begin{array}{c}1/2\\1/2\\1/2\end{array}\right)
+ }
+\Big \}
+$$
+}
+and
+ {\footnotesize
+ $$
+  conv.hull\Big\{
+ {\tiny
+ \left(\begin{array}{c}0\\0\\0\end{array}\right)
+ \left(\begin{array}{c}1\\0\\0\end{array}\right)
+ \left(\begin{array}{c}0\\1\\0\end{array}\right)
+ \left(\begin{array}{c}0\\0\\1\end{array}\right)
+ }
+\Big \}
+=
+  \left\{
+ \begin{array}{rrrl}
+  x_1, &x_2,& x_3 & \ge 0\\
+ x_1 & +x_2  & +x_3  &\le 1
+ \end{array}
+ \right. 
+ $$ 
+ }
+So optimizing a linear function over $\{x:Ax\le a$, 
+$x$
+ integer$\}$
+ is equivalent to optimize it over the integer polyhedron
+ $\{x:Bx\le b\}$.
+ It is of course elusive to try to formulate NP-hard problems as (easy) LP's.
+ However, it can often be done for classes of easy instances, and furthermore, a partial description of the integer polyhedron can be used to strenghten enumeration methods (Branch-and-Bound) and leads to efficient solving methods.
+ The efficiency of cutting-plane algorithms is based on the detection of facets of the integer polyhedron.
+ Facets are associated with particular structures that can be described in the terms of Graph Theory, such as cliques or odd-cycles, and cutting-plane algorithms use subroutines solving graph optimization problems. 
+
+These theoretical results have a huge impact on real-life problems which, although more complex, can often be decomposed into 
+%From a complicated and sophisticated  ``real-life problem'' one is thus led to study fundamental 
+well-posed problems of optimization in graphs, and then, theoretical results are often translated into practical results.
+ 
+
+\subsubsection{Graph Coloring}
+
+One of the most important theorems in Combinatorial Optimization is probably the Strong Perfect Graph Theorem.
+It gives a characterization of all 0-1 matrices $A$ having the property that
+$\{x\in \mathbb{R}^n:$ $Ax\le \mathbf{1}$, $x\ge \mathbf{0}\}$ is a polyhedron all vertices of which are integer.
+%(in fact 0-1 valued). 
+These matrices $A$ are also called perfect since they must precisely be the incidence matrices of cliques of perfect graphs (which are characterized by the Strong Perfect Graph Theorem in terms of forbidden induced subgraphs).
+Perfect graphs are those for which the chromatic and clique numbers are equal for all subgraphs.  
+Although the linear relaxations leads to integer primal and dual optima when $A$ is perfect, no combinatorial nor LP algorithm is known to solve them in polynomial time. Semi-definite programming (SDP) is actually the only known method.
+In \cite{Cornaz2014Chromatic-623556}, based on a graph transformation, any parameter sandwiched between the clique and chromatic numbers is tranformed into a different sandwiched parameter, and surprisingly it always moves the value of the SDP relaxation (Lov\'asz Theta function) toward the chromatic number, and, on the contrary, the LP relaxation is moved toward the clique number. Experiments shows that it improves significantly the quality of the SDP relaxation much more than by strenghtening the formulation.
+This transformation can also be used to design methods which are efficient in practice to solve the graph coloring problem \cite{DBLP:journals/networks/FuriniGT17,Cornaz2017151}.
+
+\subsubsection{Integer Linear Programming and Applications}
+
+ Some problems related to network design have been considered: $k$-connected subgraph with bounded length, capacitated network design and virtual private network \cite{Uchoa2013Hop-level-624237, Lacroix2012Models-610920}. Two PhD theses have been prepared within this work. Further problems have been considered for which cutting-plane algorithm have been devised: via minimization \cite{DBLP:conf/iscopt/LacroixMM12}, constrained knapsack \cite{DBLP:conf/codit/SalemTAM16}, and $k$-separator where polyhedral and algorithmic aspects are closely related in
+ \cite{DBLP:conf/drcn/DiarrassoubaMM16,DBLP:conf/codit/MagnoucheMM16, Mahjoub2012Polyhedral-619459} while \cite{Mahjoub2012On-624880, Lacroix2012On-615125} focus on the complexity.
+
+The approach based on linear geometry is applied to multi-objective optimization  in \cite{Aissi2014A-775489,DBLP:journals/mp/AissiMMQ15}, it is proved that the parametric complexity of the global minimum cut problem is $O(|V|^3)$. 
+ As a consequence,  the number of non-dominated points is $O(|V|^7)$, and there is a strongly polynomial time algorithm to compute these points. Here $|V|$ is the number of vertices of the underlying graph. These results improve on significantly previous results in the literature.  
+
+
+
+The Dantzig-Wolfe decomposition and reformulation is a technique  to provide strong dual bounds for specially structured mixed integer programs (MIPs). 
+Generic Dantzig-Wolfe reformulation can be effectively used to solve generic MIPs outperforming the classical approaches based on Branch-and-Cut algorithms for different classes of problems \cite{DBLP:journals/mp/BergnerCCFLMT15}, \cite{DBLP:journals/informs/CapraraFM13}, \cite{DBLP:journals/ipl/CapraraFMT16}, \cite{DBLP:journals/cor/FuriniM13}. 
+
+ Semidefinite Programming (SDP) relaxation is studied within the framework provided by Mixed Integer Nonlinear Programming (MINLP) solvers when tackling Binary Quadratic Problems (BQP) \cite{Furini2013Hybrid-1307565}. 
+ 
+Real-world applications of Operations Research have been investigated associated with Aircraft Routing and Sequencing,  and Train Timetabling \cite{Cacchiani201697}. 
+
+\subsubsection{Robustness}
+
+
+In an industrial context, factors of uncertainty are multiple and do not always allow to assign 
+a single value to the parameters of the model. In most cases, probability information is not available. 
+Models have to include sets of plausible values (called scenarios) for parameters. The problem 
+is then to determine a robust solution, i.e. a solution of good quality in most scenarios. 
+A state-of-the art paper is published  in European Journal of Operational Research 
+\cite{DBLP:journals/eor/GabrelMT14}. 
+Methods for solving  a localization and transport problem with uncertain demands are developped in \cite{DBLP:journals/dam/GabrelLMR14}. 
+A new robustness criterion, initially 
+proposed by B. Roy, based on linear programming, is applied in \cite{DBLP:journals/anor/GabrelMW13}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{MOCO: Multi-Objective Combinatorial Optimization}
+
+
+\subsubsection{Project description}
+
+LAMSADE has long been well known for the development of multicriteria methods when the set of solutions, of relatively small size, is defined explicitly by an exhaustive list (ELECTRE methods). This project addresses multicriteria problems where the set of solutions is defined combinatorially. Indeed, many combinatorial optimization problems require taking into account multiple criteria. In this context, an important issue is to determine the set of efficient solutions (also called Pareto-optimal solutions) or more precisely the set of nondominated points, which corresponds to the images of these solutions in the objective space. A main challenge, both from the decision making and computational viewpoints, is the potentially huge size of the nondominated set which can grow exponentially with the size of the instances for most problems. The main lines of research of the project are:
+
+
+\begin{itemize}
+\item Production of theoretical results on the complexity and approximation of multi-objective optimization problems.
+\item Design of practically efficient, exact or approximate, algorithms in order to determine the nondominated set or a preferred subset, for various multiobjective combinatorial optimization problems.
+\item Applications of the proposed approaches to real contexts.
+\end{itemize}
+
+This is a transversal project, involving members of teams~1 and~2 of LAMSADE. It was supported by an ANR 2010-2013 project with LIP6 and LINA and two PHC projects (CEDRE 2014-205 with Lebanese American University and PROCOPE 2016-2017 with the University of Wuppertal). It benefited from cooperations with IFSTTAR, ONERA, and DCNS.
+
+%\medskip
+%\noindent\textbf{Project members}:\\
+%\noindent\textbf{Permanent members}: Hassene Aissi, Mohamed Ali Aloulou, Cristina Bazgan, Lucie Galand, Laurent Gourv\`es, Julien Lesca, J\'er\^ome Monnot, Sonia Toubaline, Daniel Vanderpooten (head).\\
+%\noindent\textbf{PhD students}: Lyes Belhoul, Marek Cornu, Kerstin Dachert (post doc), Yann Dujardin, Florian Jamain, Sami Kaddani, Renaud Lacour, Dalal Madakat, Satya Tamby, Lydia Tlilane.
+
+\subsubsection{Complexity and approximation}
+
+
+Our theoretical works were mainly focused on the approximation of the set of efficient solutions. In particular, we studied, for different problems including matroids and matchings, the best approximation we can obtain with a fixed number of solutions~\cite{Bazgan2013Single-624467,Bazgan2013Approximation-624791,Gourves2015Approximate-634726, DBLP:journals/tcs/GourvesMPV17}. We also established general approximation results and algorithms aiming at producing minimal size approximations, which are particularly useful to provide a concise representation of the nondominated set~\cite{Bazgan2015Approximate-633407,Bazgan2016Discrete-1168159}. In addition, we studied properties of approximations based on dominance cones which generalize the standard Pareto cone~\cite{Vanderpooten2017Covers-1168175}. Bounds on the number of nondominated points are presented in~\cite{Bazgan2013On-626114} and, specifically for the multiobjective global cut problem \cite{Aissi2014A-775489,DBLP:journals/mp/AissiMMQ15}. 
+
+\subsubsection{Determination of the non-dominated set or a preferred subset}
+
+We attach a particular importance to the design of practically efficient multi-objective algorithms. For this purpose, we have introduced and studied the essential concept of a search region~\cite{Klamroth2015On-634730,Dachert2017Efficient-1250848}. We have developed algorithms for the multi-objective versions of various standard problems including assignment~\cite{Belhoul2014An-634706}, knapsack~\cite{Figueira2013Algorithmic-623559}, and traveling salesman~\cite{Cornu2017Perturbed-1168165}. Another original stream of research deals with the generation of the preferred solutions in the sense of a specific aggregation model such as OWA~\cite{Galand2012Exact-610325}, Choquet~\cite{DBLP:conf/ijcai/GalandLP13}, Lorenz~\cite{Galand2015Exact-1052488} or a partially defined weighted sum~\cite{Kaddani2017Weighted-1232001}. The contribution of multiobjective optimization for robust optimization, in the case of network capacity expansion problems, is studied in ~\cite{Aissi2016Robust-1096886}.
+
+
+
+
+\subsubsection{Implementation in real contexts}
+
+
+Since the creation of this project, we have focused on the effective implementation of multi-objective combinatorial optimization methods in various applied contexts ranging from scheduling problems~\cite{Aloulou2014A-624967} to adaptive multi-objective regulation of the traffic in collaboration with IFSTTAR~\cite{Dujardin2015A-634974}, through  planning of space missions, with ONERA~\cite{Madakat2013Biobjective-624327}, or quality of service for web services~\cite{Abu-Khzam2015On-1017005}.
+
+\subsection{Perspectives}
+\subsubsection{AGaPe}
+The two main research priorities of the AGaPe research team for the next five years are the following:
+\begin{itemize}
+\item Intensification of the research effort on the new approximation models (mainly sub-exponential and parameterized approximation) in order to explore both their power and their limits: establishing appproximation results for problems for which we know there is no possible polynomial-time approximation, showing that 
+%in establishing new results (impossible in polynomial time) and their limits (impossibility results of the form 
+a given problem or class of problems is inapproximable within a certain ratio with a certain (exponential) complexity. The LAMSADE is one of the international initiators of this research program that starts mobilizing a great amount of research energy. The development of this research line is a very promising way to cope with the limits of polynomial approximation and to bridge the gap between polynomial and exponential computational time.
+\item Development of a new research line “polynomial approximation via mathematical programming” by trying to put together the powerful artillery of the mathematical programming and the deep knowledge about the solutions mechanisms of hard problems accumulated by the long research on polynomial approximation. Our main objectives here is the development of novel concepts, tools and techniques for both polynomial and sub-exponential approximation able to produce new results and/or to improve existing ones. Even if this matching is not entirely new, many things remain to be done in order that our knowledge about the solution mechanisms for intractable problems becomes deeper and stronger.
+\end{itemize}
+Obviously our research effort around the other current research-lines (polynomial approximation, dynamic optimization, algorithmic game theory) will also continue and intensify.\\
+
+\subsubsection{Mathis}
+ As perspectives, Mathis will mainly continue to develop the research projects which are currently considered. Further applications of graph colouring problems and of their generalizations will be investigated from the view point of primal and 
+dual integrality. New robustness approaches in the frameworks of portfolio optimization and service composition will be developed, with a particular interest to deterministic and probabilistic mathematical programming based approximation algorithms. Also, novel cutting-plane based algorithms for solving hard and large combinatorial optimization problems in network design and other domains taking advantage of the innovative decomposition and reformulation methods will be developed. Also Mathis aims to more develop the new research line related to combinatorial multi-criteria optimization and mathematical programming.
+Most of these projects will be conducted in collaboration with researchers in France and abroad.\\
+
+\subsubsection{MOCO}
+ The field of multiobjective combinatorial optimization is extremely active, as shown by the increasing cooperations with other, mainly European, researchers.
+The main challenges are related to the design of exact and approximate algorithms for more than two objectives, where nice properties of the biobjective case are no longer valid.
+A particular attention will be devoted to the concise representation of the non-dominated set for more than two objectives. We will also continue to apply our concepts and algorithms
+in real contexts thanks to our regular collaborations with industrial partners.
